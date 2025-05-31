@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        const body = document.querySelector("body");
+        body.style.width = "373px";
+        body.style.height = "auto";
+        body.style.border = "1px solid rgba(181, 181, 181, 1)";
+        body.style.display = "flex";
+        body.style.flexDirection = "column";
+        body.style.alignItems = "center";
+
+        const menu = document.createElement("div");
+        body.appendChild(menu);
+        menu.style.width = "375px";
+        menu.style.height = "88px";
+        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
+        menu.style.alignItems = "center";
+        menu.style.justifyContent = "space-between";
+        menu.style.display = "flex";
+        menu.style.flexDirection = "row";
+
+
+        const cyber = document.createElement("img");
+        menu.appendChild(cyber);
+        cyber.src = "Logo Vector.png";
+        cyber.style.width = "65.4px";
+        cyber.style.height = "22.87px";
+        cyber.style.marginLeft = "16px";
+
+        const burger = document.createElement("img");
+        menu.appendChild(burger);
+        burger.src = "Burger.png";
+        burger.style.width = "40px";
+        burger.style.height = "40px";
+        burger.style.marginRight = "24px";
+
+        const shoppingCardDiv = document.createElement("div");
+        body.appendChild(shoppingCardDiv);
+        shoppingCardDiv.style.marginTop = "40px";
+        shoppingCardDiv.style.display = "flex";
+        shoppingCardDiv.style.alignItems = "center";
+        shoppingCardDiv.style.width = "341px";
+        shoppingCardDiv.style.height = "24px";
+
+        const shoppingCard = document.createElement("h1");
+        shoppingCardDiv.appendChild(shoppingCard);
+        shoppingCard.style.fontSize = "24px";
+        shoppingCard.innerText = "Shopping Cart";
+        shoppingCard.style.marginLeft = "0px";
+
+        const products = document.createElement("div");
+        body.appendChild(products);
+        products.style.marginTop = "40px";
+        products.style.display = "flex";
+        products.style.alignItems = "center";
+        products.style.width = "341px";
+        products.style.height = "152px";
+        products.style.border = "1px solid purple";
+        products.style.marginBottom = "80px";
+
+
+
+        const productImageDiv = document.createElement("div");
+        products.appendChild(productImageDiv);
+        productImageDiv.style.display = "flex";
+        productImageDiv.style.alignItems = "center";
+        productImageDiv.style.width = "90px";
+        productImageDiv.style.height = "90px";
+        productImageDiv.style.border = "1px solid purple";
+
+        const productInfos = document.createElement("div");
+        products.appendChild(productInfos);
+        productInfos.style.display = "flex";
+        productInfos.style.flexDirection = "column";
+        productInfos.style.width = "236px";
+        productInfos.style.height = "120px";
+        productInfos.style.border = "1px solid purple";
+        productInfos.style.marginLeft = "15px";
+
+        fetch('https://fakestoreapi.com/products/')
+            .then(res => res.json())
+            .then(json => {
+
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = Number(urlParams.get("id"));
+
+                const productImage = document.createElement("img");
+                productImageDiv.appendChild(productImage);
+                productImage.src = json[productId].image;
+                productImage.style.width = "90px";
+                productImage.style.height = "90px";
+
+                const productTitle = document.createElement("p");
+                productInfos.appendChild(productTitle);
+                productTitle.innerText = json[productId].title;
+
+                const price = document.createElement("p");
+                productInfos.appendChild(price);
+                price.innerText = json[productId].price + "$";
+                price.style.fontSize = "20px";
+                price.style.fontWeight = "700";
+                price.style.marginTop = "10px";
+
+
+            });
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

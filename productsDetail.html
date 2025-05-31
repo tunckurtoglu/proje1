@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+    
+    <script>
+
+        fetch('https://fakestoreapi.com/products/')
+            .then(res => res.json())
+            .then(json => {
+
+
+                const urlParams = new URLSearchParams(window.location.search);
+                const productId = Number(urlParams.get("id"));
+                console.log(json[productId]);
+
+
+
+                const body = document.querySelector("body");
+                body.style.width = "373px";
+                body.style.height = "auto";
+                body.style.border = "1px solid rgba(181, 181, 181, 1)";
+                body.style.display = "flex";
+                body.style.flexDirection = "column";
+                body.style.alignItems = "center";
+
+
+
+                const menu = document.createElement("div");
+                body.appendChild(menu);
+                menu.style.width = "375px";
+                menu.style.height = "88px";
+                menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
+                menu.style.alignItems = "center";
+                menu.style.justifyContent = "space-between";
+                menu.style.display = "flex";
+                menu.style.flexDirection = "row";
+
+
+                const cyber = document.createElement("img");
+                menu.appendChild(cyber);
+                cyber.src = "Logo Vector.png";
+                cyber.style.width = "65.4px";
+                cyber.style.height = "22.87px";
+                cyber.style.marginLeft = "16px";
+
+                const burger = document.createElement("img");
+                menu.appendChild(burger);
+                burger.src = "Burger.png";
+                burger.style.width = "40px";
+                burger.style.height = "40px";
+                burger.style.marginRight = "24px";
+
+
+                const img = document.createElement("img");
+                body.appendChild(img);
+                img.src = json[productId].image;
+                img.style.width = "263px";
+                img.style.height = "329px";
+                img.style.marginTop = "40px";
+
+
+                const titleDiv = document.createElement("div");
+                body.appendChild(titleDiv);
+                titleDiv.style.marginTop = "53px";
+                titleDiv.style.width = "341px";
+                titleDiv.style.height = "80px";
+                titleDiv.style.display = "flex";
+                titleDiv.style.alignItems = "center";
+
+
+
+
+                const title = document.createElement("p");
+                titleDiv.appendChild(title);
+                title.innerText = json[productId].title;
+                title.style.fontSize = "35px";
+                title.style.fontWeight = "800";
+
+
+
+                const priceDiv = document.createElement("div");
+                body.appendChild(priceDiv);
+                priceDiv.style.marginTop = "30px";
+                priceDiv.style.width = "341px";
+                priceDiv.style.height = "48px";
+                priceDiv.style.alignItems = "center";
+                priceDiv.style.display = "flex";
+
+
+
+                const price = document.createElement("p");
+                priceDiv.appendChild(price);
+                price.innerText = json[productId].price + "$";
+                price.style.fontSize = "35px";
+
+                const descDiv = document.createElement("div");
+                body.appendChild(descDiv);
+                descDiv.style.marginTop = "24px";
+                descDiv.style.width = "341px";
+                descDiv.style.height = "72px";
+                descDiv.style.alignItems = "center";
+                descDiv.style.display = "flex";
+
+                const desc = document.createElement("p");
+                descDiv.appendChild(desc);
+                desc.innerText = json[productId].description;
+                desc.style.fontSize = "14px";
+                desc.style.color = "rgba(108, 108, 108, 1)";
+
+
+                const addWishlist = document.createElement("button");
+                body.appendChild(addWishlist);
+                addWishlist.innerText = "Add to Wishlist";
+                addWishlist.style.fontSize = "17px";
+                addWishlist.style.marginTop = "35px";
+                addWishlist.style.width = "341px";
+                addWishlist.style.height = "56px";
+                addWishlist.style.display = "flex"
+                addWishlist.style.alignItems = "center";
+                addWishlist.style.justifyContent = "center";
+                addWishlist.style.borderRadius = "6px";
+                addWishlist.style.border = "1px solid black";
+                addWishlist.style.backgroundColor = "white";
+
+                const addCard = document.createElement("button");
+                body.appendChild(addCard);
+                addCard.innerText = "Add to Card";
+                addCard.style.color = "white";
+                addCard.style.marginTop = "16px";
+                addCard.style.fontSize = "17px";
+                addCard.style.width = "341px";
+                addCard.style.height = "56px";
+                addCard.style.display = "flex"
+                addCard.style.alignItems = "center";
+                addCard.style.justifyContent = "center";
+                addCard.style.borderRadius = "6px";
+                addCard.style.border = "1px solid black";
+                addCard.style.backgroundColor = "black";
+
+               
+
+                addCard.onclick = () => {
+
+                   
+                    let url = "shoppingCard.html" + "?id=" + productId;
+                    window.location.href = url;
+                }
+
+                const deliveryIcon = document.createElement("img");
+                body.appendChild(deliveryIcon);
+                deliveryIcon.src = "Icons.png";
+                deliveryIcon.style.marginTop = "43px";
+
+                const footer = document.createElement("img");
+                body.appendChild(footer);
+                deliveryIcon.src = "footer.png";
+                deliveryIcon.style.marginTop = "100px";
+
+
+
+
+
+
+
+
+            });
+                      
+
+
+    </script>
+
+</body>
+</html>

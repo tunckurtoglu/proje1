@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        .title {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            width: 100%;
+    
+        }
+     
+        
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        const body = document.querySelector("body");
+        body.style.width = "373px";
+        body.style.display = "flex";
+        body.style.alignItems = "center";
+        body.style.flexDirection = "column";
+        body.style.border = "1px solid rgba(181, 181, 181, 1)";
+        body.style.flexWrap = "wrap";
+
+       
+
+        const menu = document.createElement("div");
+        body.appendChild(menu);
+        menu.style.width = "371px";
+        menu.style.height = "88px";
+        menu.style.marginLeft = "0px";
+        menu.style.marginRight = "0px";
+
+        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
+
+        menu.style.display = "flex";
+        menu.style.flexDirection = "row";
+        menu.style.alignItems = "center";
+        menu.style.justifyContent = "space-between";
+
+        const filterAndRating = document.createElement("div");
+        body.appendChild(filterAndRating);
+        filterAndRating.style.width = "344px";
+        filterAndRating.style.height = "56px";
+        filterAndRating.style.display = "flex";
+        filterAndRating.style.flexDirection = "row";
+        filterAndRating.style.justifyContent = "space-between";
+        filterAndRating.style.marginTop = "40px";
+   
+
+        const filters = document.createElement("div");
+        filterAndRating.appendChild(filters);
+        filters.style.width = "164px";
+        filters.style.height = "56px";
+        filters.style.border = "1px solid rgba(212, 212, 212, 1)";
+        filters.style.borderRadius = "8px";
+        filters.style.display = "flex";
+        filters.style.flexDirection = "row";
+        filters.style.justifyContent = "space-between";
+        filters.style.alignItems = "center";
+
+        const filtersText = document.createElement("p");
+        filters.appendChild(filtersText);
+        filtersText.innerText = "Filters";
+        filtersText.style.marginLeft = "16px";
+        filtersText.style.fontSize = "15px";
+
+
+        const filterIcon = document.createElement("img");
+        filters.appendChild(filterIcon);
+        filterIcon.src = "Vector.png";
+        filterIcon.style.width = "16px";
+        filterIcon.style.height = "18px";
+        filterIcon.style.marginRight = "19px";
+
+        const rating = document.createElement("div");
+        filterAndRating.appendChild(rating);
+        rating.style.width = "164px";
+        rating.style.height = "56px";
+        rating.style.border = "1px solid rgba(212, 212, 212, 1)";
+        rating.style.borderRadius = "8px";
+        rating.style.display = "flex";
+        rating.style.flexDirection = "row";
+        rating.style.alignItems = "center";
+        rating.style.justifyContent = "space-between";
+
+        const ratingText = document.createElement("p");
+        rating.appendChild(ratingText);
+        ratingText.innerText = "By rating";
+        ratingText.style.marginLeft = "16px";
+        ratingText.style.fontSize = "15px";
+
+        const ratingIcon = document.createElement("img");
+        rating.appendChild(ratingIcon);
+        ratingIcon.src = "Vector 9.png";
+        ratingIcon.style.width = "15px";
+        ratingIcon.style.height = "9px";
+        ratingIcon.style.marginRight = "25px";
+
+        const cyber = document.createElement("img");
+        menu.appendChild(cyber);
+        cyber.src = "Logo Vector.png";
+        cyber.style.width = "65.4px";
+        cyber.style.height = "22.87px";
+        cyber.style.marginLeft = "16px";
+
+        const burger = document.createElement("img");
+        menu.appendChild(burger);
+        burger.src = "Burger.png";
+        burger.style.width = "40px";
+        burger.style.height = "40px";
+        burger.style.marginRight = "24px";
+
+        const productResults = document.createElement("div");
+        body.appendChild(productResults);
+        productResults.style.width = "344px";
+        productResults.style.height = "auto";
+        productResults.style.marginTop = "24px";
+        productResults.style.color = "rgba(108, 108, 108, 1)";
+        productResults.style.display = "flex";
+        productResults.style.flexDirection = "row";
+        productResults.style.alignItems = "center";
+
+        const resultText = document.createElement("p");
+        productResults.appendChild(resultText);
+        resultText.innerText = "Product Results:";
+        resultText.style.fontFamily = "calibri";
+        resultText.style.fontSize = "16px";
+
+
+
+        fetch('https://fakestoreapi.com/products/')
+            .then(res => res.json())
+            .then(json => {
+
+                const resultNumber = document.createElement("p");
+                productResults.appendChild(resultNumber);
+
+
+                for (let i = 0; i <= json.length; i++) {
+
+                    resultNumber.innerText = i;
+                    resultNumber.style.fontSize = "20px";
+                    resultNumber.style.marginLeft = "6px";
+                    resultNumber.style.fontFamily = "arial";
+                    resultNumber.style.color = "black";
+                    resultNumber.style.fontWeight = "500";
+
+
+
+                }
+            })
+
+
+
+
+        const productsArea = document.createElement("div");
+        body.appendChild(productsArea);
+        productsArea.style.width = "344px";
+        productsArea.style.display = "flex";
+        productsArea.style.flexDirection = "row";
+        productsArea.style.justifyContent = "space-between";
+        productsArea.style.flexWrap = "wrap";
+        productsArea.style.marginTop = "24px";
+
+
+
+
+        fetch('https://fakestoreapi.com/products/')
+            .then(res => res.json())
+            .then(json => {
+
+                
+                for (let i = 0; i < json.length; i++) {
+
+                const products = document.createElement("div");
+                productsArea.appendChild(products);
+                products.style.width = "164px";
+                products.style.height = "auto";
+                    products.style.border = "1px solid rgba(255, 255, 255, 1)";
+                products.style.display = "flex";
+                products.style.borderRadius = "9px";
+                products.style.flexDirection = "column";
+                products.style.alignItems = "center";
+                products.style.backgroundColor = "rgba(246, 246, 246, 1)";
+                    products.style.marginBottom = "16px";
+                    products.style.flexWrap = "wrap";
+
+                const image = document.createElement("img");
+                image.src = json[i].image;
+                products.appendChild(image);
+                image.style.width = "104px";
+                image.style.height = "104px";
+                image.style.marginTop = "64px";
+
+
+                const bilgiler = document.createElement("div");
+                    products.appendChild(bilgiler);
+                    bilgiler.style.display = "flex";
+                    bilgiler.style.flexDirection = "column";
+                    bilgiler.style.alignItems = "center";
+                    bilgiler.style.marginTop = "8px";
+                    bilgiler.style.width = "140px";
+                    bilgiler.style.height = "auto";
+
+
+                const Decription = document.createElement("p");
+                bilgiler.appendChild(Decription);
+                Decription.innerText = json[i].title;
+                Decription.style.fontFamily = "calibri";
+                    Decription.style.fontSize = "16px";
+                    Decription.classList.add("title");
+
+
+                    const price = document.createElement("p");
+                    products.appendChild(price);
+                    price.innerText = json[i].price + "$";
+                    price.style.fontFamily = "calibri";
+                    price.style.fontSize = "24px";
+                    price.style.marginBottom = "16px";
+
+
+
+
+                    const buyNow = document.createElement("button");
+                    products.appendChild(buyNow);
+                    buyNow.innerText = "Buy Now";
+                    buyNow.style.width = "140px";
+                    buyNow.style.height = "48px";
+                    buyNow.style.backgroundColor = "black";
+                    buyNow.style.color = "white";
+                    buyNow.style.borderRadius = "8px";
+                    buyNow.style.marginTop = "16px";
+                    buyNow.style.marginBottom = "24px";
+
+
+
+                    buyNow.onclick = () => {
+                        const urlParams = new URLSearchParams(window.location.search);
+                        const productId = urlParams.get("id");
+
+                        let url = "productsDetail.html" + "?id=" + i;
+                        window.location.href = url;
+
+                    }
+
+
+                }
+
+            })
+
+
+
+        const nextPage = document.createElement("button");
+        body.appendChild(nextPage);
+        nextPage.style.width = "24px";
+        nextPage.style.height = "24px";
+        nextPage.style.backgroundColor = "white";
+        nextPage.innerText = ">";
+        nextPage.style.color = "black";
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>
