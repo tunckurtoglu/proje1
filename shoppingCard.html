@@ -62,56 +62,52 @@
         shoppingCard.innerText = "Shopping Cart";
         shoppingCard.style.marginLeft = "0px";
 
-        const products = document.createElement("div");
-        body.appendChild(products);
-        products.style.marginTop = "40px";
-        products.style.display = "flex";
-        products.style.alignItems = "center";
-        products.style.width = "341px";
-        products.style.height = "152px";
-        products.style.border = "1px solid purple";
-        products.style.marginBottom = "80px";
+        
 
 
-
-        const productImageDiv = document.createElement("div");
-        products.appendChild(productImageDiv);
-        productImageDiv.style.display = "flex";
-        productImageDiv.style.alignItems = "center";
-        productImageDiv.style.width = "90px";
-        productImageDiv.style.height = "90px";
-        productImageDiv.style.border = "1px solid purple";
-
-        const productInfos = document.createElement("div");
-        products.appendChild(productInfos);
-        productInfos.style.display = "flex";
-        productInfos.style.flexDirection = "column";
-        productInfos.style.width = "236px";
-        productInfos.style.height = "120px";
-        productInfos.style.border = "1px solid purple";
-        productInfos.style.marginLeft = "15px";
-
-        fetch('https://fakestoreapi.com/products/')
-            .then(res => res.json())
-            .then(json => {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.forEach(product => {
 
 
-                const urlParams = new URLSearchParams(window.location.search);
-                const productId = Number(urlParams.get("id"));
+                    const products = document.createElement("div");
+                    body.appendChild(products);
+                    products.style.marginTop = "40px";
+                    products.style.display = "flex";
+                    products.style.alignItems = "center";
+                    products.style.width = "341px";
+                    products.style.height = "152px";
+                    products.style.border = "1px solid purple";
+                    products.style.marginBottom = "80px";
 
+                    const productImageDiv = document.createElement("div");
+                    products.appendChild(productImageDiv);
+                    productImageDiv.style.display = "flex";
+                    productImageDiv.style.alignItems = "center";
+                    productImageDiv.style.width = "90px";
+                    productImageDiv.style.height = "90px";
+                    productImageDiv.style.border = "1px solid purple";
+
+                    const productInfos = document.createElement("div");
+                    products.appendChild(productInfos);
+                    productInfos.style.display = "flex";
+                    productInfos.style.flexDirection = "column";
+                    productInfos.style.width = "236px";
+                    productInfos.style.height = "120px";
+                    productInfos.style.border = "1px solid purple";
+                    productInfos.style.marginLeft = "15px";
                 const productImage = document.createElement("img");
                 productImageDiv.appendChild(productImage);
-                productImage.src = json[productId].image;
+                    productImage.src = product.image;
                 productImage.style.width = "90px";
                 productImage.style.height = "90px";
 
                 const productTitle = document.createElement("p");
                 productInfos.appendChild(productTitle);
-                productTitle.innerText = json[productId].title;
+                    productTitle.innerText = product.title;
 
                 const price = document.createElement("p");
                 productInfos.appendChild(price);
-                price.innerText = json[productId].price + "$";
+                    price.innerText = product.price + "$";
                 price.style.fontSize = "20px";
                 price.style.fontWeight = "700";
                 price.style.marginTop = "10px";
