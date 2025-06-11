@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        const body = document.querySelector("body");
+        body.style.width = "373px";
+        body.style.height = "auto";
+        body.style.border = "1px solid rgba(181, 181, 181, 1)";
+        body.style.display = "flex";
+        body.style.flexDirection = "column";
+        body.style.alignItems = "center";
+
+        const menu = document.createElement("div");
+        body.appendChild(menu);
+        menu.style.width = "375px";
+        menu.style.height = "88px";
+        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
+        menu.style.alignItems = "center";
+        menu.style.justifyContent = "space-between";
+        menu.style.display = "flex";
+        menu.style.flexDirection = "row";
+
+
+        const cyber = document.createElement("img");
+        menu.appendChild(cyber);
+        cyber.src = "Logo Vector.png";
+        cyber.style.width = "65.4px";
+        cyber.style.height = "22.87px";
+        cyber.style.marginLeft = "16px";
+
+        const burger = document.createElement("img");
+        menu.appendChild(burger);
+        burger.src = "Burger.png";
+        burger.style.width = "40px";
+        burger.style.height = "40px";
+        burger.style.marginRight = "24px";
+
+        const step1 = document.createElement("img");
+        body.appendChild(step1);
+        step1.style.width = "373px";
+        step1.style.height = "104px";
+        step1.src = "Steps.png";
+
+        const h2Div = document.createElement("div");
+        body.appendChild(h2Div);
+        h2Div.style.width = "341px";
+        h2Div.style.height = "24px";
+        h2Div.style.display = "flex";
+        h2Div.style.flexDirection = "row";
+       
+
+        const h2  = document.createElement("p");
+        h2Div.appendChild(h2);
+        h2.style.fontFamily = "arial";
+        h2.style.fontSize = "21px";
+        h2.innerText = "Select Adress";
+
+        const adressArea = document.createElement("div");
+        body.appendChild(adressArea);
+        adressArea.style.width = "341px";
+        adressArea.style.marginTop = "48px";
+        adressArea.id = "new";
+        adressArea.style.marginTop = "32px";
+        adressArea.style.display = "flex";
+        adressArea.style.flexDirection = "column";
+        adressArea.style.alignItems = "center";
+        adressArea.style.justifyContent = "center";
+
+
+        const adress = document.createElement("div");
+        adressArea.appendChild(adress);
+        adress.style.width = "341px";
+        adress.style.height = "192px";
+        adress.style.backgroundColor = "rgba(246, 246, 246, 1)";
+        adress.style.display = "flex";
+        adress.style.flexDirection = "row";
+        adress.style.borderRadius = "7px";
+
+
+        const input = document.createElement("textarea");
+        input.type = "text";
+        input.id = "addressInput";
+        input.placeholder = "Insert Your Address...";
+        adress.appendChild(input);
+        input.style.width = "221px";
+        input.style.height = "144px";
+        input.style.marginLeft = "24px";
+        input.style.marginTop = "24px";
+        input.style.backgroundColor = "rgba(246, 246, 246, 1)";
+        input.style.border = "0px";
+
+
+        input.addEventListener("input", () => {
+            localStorage.setItem("savedAddress", input.value);
+        });
+
+        const saved = localStorage.getItem("savedAddress");
+        if (saved) {
+            input.value = saved;
+        }
+
+        const pen = document.createElement("img");
+        adress.appendChild(pen);
+        pen.style.width = "24px";
+        pen.style.height = "24px";
+        pen.style.marginLeft = "0px";
+        pen.style.marginTop = "87px";
+        pen.src = "To edit.png";
+
+        pen.onclick = () => {
+
+            const adressinput = document.getElementById("addressInput");
+            adressinput.focus();
+
+
+        }
+
+        const close = document.createElement("img");
+        adress.appendChild(close);
+        close.style.width = "24px";
+        close.style.height = "24px";
+        close.style.marginLeft = "24px";
+        close.style.marginTop = "87px";
+        close.src = "close.png";
+
+        
+        const newAdressLine = document.createElement("img");
+        adressArea.appendChild(newAdressLine);
+        newAdressLine.style.width = "341px";
+        newAdressLine.style.height = "48px";
+        newAdressLine.style.marginTop = "48px";
+        newAdressLine.src = "line.png";
+        newAdressLine.id = "new";
+
+
+        newAdressLine.onclick = () => {
+
+            const openAdressNew = document.createElement("div");
+            adressArea.appendChild(openAdressNew);
+            openAdressNew.style.width = "341px";
+            openAdressNew.style.height = "192px";
+            openAdressNew.style.backgroundColor = "rgba(246, 246, 246, 1)";
+            openAdressNew.style.display = "flex";
+            openAdressNew.style.flexDirection = "row";
+            openAdressNew.style.borderRadius = "7px";
+            openAdressNew.style.marginTop = "24px";
+            openAdressNew.style.marginBottom = "24px";
+
+            const inputNew = document.createElement("textarea");
+            inputNew.type = "text";
+            inputNew.id = "addressInputNew";
+            inputNew.placeholder = "Insert Your Address...";
+            openAdressNew.appendChild(inputNew);
+            inputNew.style.width = "221px";
+            inputNew.style.height = "144px";
+            inputNew.style.marginLeft = "24px";
+            inputNew.style.marginTop = "24px";
+            inputNew.style.backgroundColor = "rgba(246, 246, 246, 1)";
+            inputNew.style.border = "0px";
+
+            inputNew.addEventListener("input", () => {
+                localStorage.setItem("savedAddress2", inputNew.value);
+            });
+
+            const saved = localStorage.getItem("savedAddress2");
+            if (saved) {
+                inputNew.value = saved;
+            }
+
+
+            const penNew = document.createElement("img");
+            openAdressNew.appendChild(penNew);
+            penNew.style.width = "24px";
+            penNew.style.height = "24px";
+            penNew.style.marginLeft = "0px";
+            penNew.style.marginTop = "87px";
+            penNew.src = "To edit.png";
+
+            const closeNew = document.createElement("img");
+            openAdressNew.appendChild(closeNew);
+            closeNew.style.width = "24px";
+            closeNew.style.height = "24px";
+            closeNew.style.marginLeft = "24px";
+            closeNew.style.marginTop = "87px";
+            closeNew.src = "close.png";
+        
+
+            penNew.onclick = () => {
+
+
+                const inputInsideThisContainer = penNew.parentElement.querySelector("textarea");
+                inputInsideThisContainer.focus();
+
+
+
+            }
+
+            closeNew.onclick = () => {
+
+
+                closeNew.parentElement.remove();
+                
+            }
+
+
+
+        }
+
+       
+
+
+        const BackAndNext = document.createElement("div");
+        body.appendChild(BackAndNext);
+        BackAndNext.style.width = "341px";
+        BackAndNext.style.height = "64px";
+        BackAndNext.style.backgroundColor = "rgba(246, 246, 246, 1)";
+        BackAndNext.style.alignItems = "center";
+        BackAndNext.style.justifyContent = "space-between";
+        BackAndNext.style.display = "flex";
+        BackAndNext.style.flexDirection = "row";
+        BackAndNext.style.marginTop = "64px";
+
+
+        const BackButton = document.createElement("div");
+        BackAndNext.appendChild(BackButton);
+        BackButton.style.width = "158.5px";
+        BackButton.style.height = "64px";
+        BackButton.style.borderRadius = "6px";
+        BackButton.innerText = "Back";
+        BackButton.style.border = "1px solid black";
+        BackButton.style.backgroundColor = "white";
+        BackButton.style.alignItems = "center";
+        BackButton.style.justifyContent = "center";
+        BackButton.style.display = "flex";
+        BackButton.style.flexDirection = "row";
+        BackButton.style.fontFamily = "calibri";
+        BackButton.style.fontSize = "18px";
+        BackButton.style.fontWeight = "550";
+
+        BackButton.onclick = () => {
+
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "shoppingCard.html";
+            window.location.href = url;
+
+        }
+
+
+        const NextButton = document.createElement("div");
+        BackAndNext.appendChild(NextButton);
+        NextButton.style.width = "158.5px";
+        NextButton.style.height = "64px";
+        NextButton.style.borderRadius = "6px";
+        NextButton.innerText = "Next";
+        NextButton.style.border = "1px solid black";
+        NextButton.style.backgroundColor = "black";
+        NextButton.style.color = "white";
+        NextButton.style.alignItems = "center";
+        NextButton.style.justifyContent = "center";
+        NextButton.style.display = "flex";
+        NextButton.style.flexDirection = "row";
+        NextButton.style.fontFamily = "calibri";
+        NextButton.style.fontSize = "18px";
+        NextButton.style.fontWeight = "550";
+
+        NextButton.onclick = () => {
+
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "step2.html";
+            window.location.href = url;
+
+        }
+
+        const footer = document.createElement("img");
+        body.appendChild(footer);
+        footer.src = "footer.png";
+        footer.style.marginTop = "48px";
+
+
+  
+
+
+
+            
+
+    </script>
+
+</body>
+</html>

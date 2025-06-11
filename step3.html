@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+    </style>
+</head>
+
+<body>
+
+
+    <script>
+
+        const body = document.querySelector("body");
+        body.style.width = "373px";
+        body.style.height = "auto";
+        body.style.border = "1px solid rgba(181, 181, 181, 1)";
+        body.style.display = "flex";
+        body.style.flexDirection = "column";
+        body.style.alignItems = "center";
+
+        const menu = document.createElement("div");
+        body.appendChild(menu);
+        menu.style.width = "375px";
+        menu.style.height = "88px";
+        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
+        menu.style.alignItems = "center";
+        menu.style.justifyContent = "space-between";
+        menu.style.display = "flex";
+        menu.style.flexDirection = "row";
+
+
+        const cyber = document.createElement("img");
+        menu.appendChild(cyber);
+        cyber.src = "Logo Vector.png";
+        cyber.style.width = "65.4px";
+        cyber.style.height = "22.87px";
+        cyber.style.marginLeft = "16px";
+
+        const burger = document.createElement("img");
+        menu.appendChild(burger);
+        burger.src = "Burger.png";
+        burger.style.width = "40px";
+        burger.style.height = "40px";
+        burger.style.marginRight = "24px";
+
+        const step3 = document.createElement("img");
+        body.appendChild(step3);
+        step3.style.width = "373px";
+        step3.style.height = "104px";
+        step3.src = "Steps3.png";
+
+        const h2Div = document.createElement("div");
+        body.appendChild(h2Div);
+        h2Div.style.width = "341px";
+        h2Div.style.height = "24px";
+        h2Div.style.display = "flex";
+        h2Div.style.flexDirection = "row";
+
+
+        const h2 = document.createElement("p");
+        h2Div.appendChild(h2);
+        h2.style.fontFamily = "arial";
+        h2.style.fontSize = "21px";
+        h2.innerText = "Payment";
+
+
+        const creditCard = document.createElement("div");
+        body.appendChild(creditCard);
+        creditCard.style.width = "337px";
+        creditCard.style.height = "188.28px";
+        creditCard.style.display = "flex";
+        creditCard.style.flexDirection = "column";
+        creditCard.style.borderRadius = "15.81px";
+        creditCard.style.border = "1px solid rgba(209, 209, 216, 1)";
+        creditCard.style.marginTop = "32px";
+        creditCard.style.backgroundColor = "black";
+        creditCard.style.backgroundImage = "url('cardLine.png')";
+        creditCard.style.backgroundRepeat = "no-repeat";
+        creditCard.style.backgroundPosition = "110px";
+
+
+        const upperImg = document.createElement("div");
+        creditCard.appendChild(upperImg);
+        upperImg.style.width = "298px";
+        upperImg.style.height = "59px";
+        upperImg.style.display = "flex";
+        upperImg.style.marginLeft = "22.47px";
+        upperImg.style.marginTop = "23.42px";
+
+        const image = document.createElement("img");
+        upperImg.appendChild(image);
+        image.style.width = "20.5px";
+        image.style.height = "20.5px";
+        image.src = "image 7.png";
+
+        const image2 = document.createElement("img");
+        upperImg.appendChild(image2);
+        image2.style.width = "24px";
+        image2.style.height = "24px";
+        image2.src = "wifi.png";
+
+        const cardNumbers = document.createElement("div");
+        creditCard.appendChild(cardNumbers);
+        cardNumbers.style.width = "298px";
+        cardNumbers.style.height = "24px";
+        cardNumbers.style.display = "flex";
+        cardNumbers.style.alignItems = "center";
+        cardNumbers.style.marginLeft = "22.41px";
+        cardNumbers.style.marginTop = "16.78px";
+        cardNumbers.style.justifyContent = "space-between";
+
+        const firstNumbers = document.createElement("textarea");
+        cardNumbers.appendChild(firstNumbers);
+        firstNumbers.type = "number";
+        firstNumbers.style.width = "60px";
+        firstNumbers.style.height = "24px";
+        firstNumbers.maxLength = 4;
+        firstNumbers.style.resize = "none";
+        firstNumbers.style.fontSize = "15px";
+        firstNumbers.style.color = "white";
+        firstNumbers.style.textAlign = "center";
+        firstNumbers.style.letterSpacing = "2px";
+        firstNumbers.style.backgroundColor = "transparent";
+        firstNumbers.style.border = "none";
+
+
+        const secondNumbers = document.createElement("textarea");
+        cardNumbers.appendChild(secondNumbers);
+        secondNumbers.type = "number";
+        secondNumbers.style.width = "60px";
+        secondNumbers.style.height = "24px";
+        secondNumbers.maxLength = 4;
+        secondNumbers.style.resize = "none";
+        secondNumbers.style.fontSize = "15px";
+        secondNumbers.style.color = "white";
+        secondNumbers.style.textAlign = "center";
+        secondNumbers.style.letterSpacing = "2px";
+        secondNumbers.style.backgroundColor = "transparent";
+        secondNumbers.style.border = "none";
+
+
+        const thirdNumbers = document.createElement("textarea");
+        cardNumbers.appendChild(thirdNumbers);
+        thirdNumbers.type = "number";
+        thirdNumbers.style.width = "60px";
+        thirdNumbers.style.height = "24px";
+        thirdNumbers.maxLength = 4;
+        thirdNumbers.style.resize = "none";
+        thirdNumbers.style.fontSize = "15px";
+        thirdNumbers.style.color = "white";
+        thirdNumbers.style.textAlign = "center";
+        thirdNumbers.style.letterSpacing = "2px";
+        thirdNumbers.style.backgroundColor = "transparent";
+        thirdNumbers.style.border = "none";
+
+
+        const fourthNumbers = document.createElement("textarea");
+        cardNumbers.appendChild(fourthNumbers);
+        fourthNumbers.type = "number";
+        fourthNumbers.style.width = "60px";
+        fourthNumbers.style.height = "24px";
+        fourthNumbers.maxLength = 4;
+        fourthNumbers.style.resize = "none";
+        fourthNumbers.style.fontSize = "15px";
+        fourthNumbers.style.color = "white";
+        fourthNumbers.style.textAlign = "center";
+        fourthNumbers.style.letterSpacing = "2px";
+        fourthNumbers.style.backgroundColor = "transparent";
+        fourthNumbers.style.border = "none";
+
+
+        const holder = document.createElement("div");
+        creditCard.appendChild(holder);
+        holder.style.width = "298px";
+        holder.style.height = "23px";
+        holder.style.display = "flex";
+        holder.style.alignItems = "center";
+        holder.style.justifyContent = "space-between";
+        holder.style.marginTop = "22.99px";
+        holder.style.marginLeft = "22.41px";
+
+
+        const name = document.createElement("textarea");
+        holder.appendChild(name);
+        name.style.width = "250px";
+        name.style.height = "23px";
+        name.style.display = "flex";
+        name.style.alignItems = "center";
+        name.style.justifyContent = "space-between";
+        name.type = "text";
+        name.placeholder = "Cardholder";
+        name.style.resize = "none";
+        name.style.fontSize = "13px";
+        name.style.color = "white";
+        name.style.backgroundColor = "transparent";
+        name.style.resize = "none";
+        name.style.border = "none";
+
+
+
+        const icon = document.createElement("img");
+        holder.appendChild(icon);
+        icon.src = "Left.png";
+        icon.style.width = "40.24px";
+        icon.style.height = "24.99px";
+
+
+        const holderName = document.createElement("textarea");
+        body.appendChild(holderName);
+        holderName.style.width = "341px";
+        holderName.style.height = "48px";
+        holderName.style.display = "flex";
+        holderName.style.alignItems = "center";
+        holderName.type = "text";
+        holderName.placeholder = "Cardholder Name";
+        holderName.style.fontSize = "16px";
+        holderName.style.color = "rgba(151, 151, 151, 1)";
+        holderName.style.backgroundColor = "white";
+        holderName.style.resize = "none";
+        holderName.style.border = "1px solid rgba(206, 206, 206, 1)";
+        holderName.style.marginTop = "40px";
+        holderName.style.justifyContent = "center";
+        holderName.style.fontFamily = "calibri";
+        holderName.style.marginBottom = "16px";
+        holderName.style.lineHeight = "48px";
+
+        holderName.addEventListener("input", () => {
+            name.value = holderName.value;
+        });
+
+
+        const cardNumber = document.createElement("div");
+        body.appendChild(cardNumber);
+        cardNumber.style.width = "341px";
+        cardNumber.style.height = "48px";
+        cardNumber.style.display = "flex";
+        cardNumber.style.alignItems = "center";
+        cardNumber.style.fontSize = "16px";
+        cardNumber.style.color = "black";
+        cardNumber.style.backgroundColor = "white";
+        cardNumber.style.resize = "none";
+        cardNumber.style.border = "1px solid rgba(206, 206, 206, 1)";
+        holderName.style.fontFamily = "calibri";
+        cardNumber.style.marginBottom = "16px";
+        cardNumber.style.lineHeight = "48px";
+
+        const cardNumberText = document.createElement("p");
+        cardNumber.appendChild(cardNumberText);
+        cardNumberText.innerText = "Card Number";
+        cardNumberText.style.fontFamily = "arial";
+        cardNumberText.style.color = "rgba(151, 151, 151, 1)";
+        cardNumberText.style.fontSize = "14px";
+
+
+        const numbers1 = document.createElement("textarea");
+        cardNumber.appendChild(numbers1);
+        numbers1.type = "number";
+        numbers1.placeholder = "____";
+        numbers1.style.width = "50px";
+        numbers1.style.height = "24px";
+        numbers1.style.resize = "none";
+        numbers1.style.fontSize = "15px";
+        numbers1.style.color = "rgba(151, 151, 151, 1)";
+        numbers1.style.textAlign = "center";
+        numbers1.style.backgroundColor = "white";
+        numbers1.style.border = "none";
+        numbers1.maxLength = 4;
+
+        numbers1.addEventListener("input", () => {
+            firstNumbers.value = numbers1.value;
+        });
+
+
+
+        const numbers2 = document.createElement("textarea");
+        cardNumber.appendChild(numbers2);
+        numbers2.type = "number";
+        numbers2.placeholder = "____";
+        numbers2.style.width = "50px";
+        numbers2.style.height = "24px";
+        numbers2.style.resize = "none";
+        numbers2.style.fontSize = "15px";
+        numbers2.style.color = "rgba(151, 151, 151, 1)";
+        numbers2.style.textAlign = "center";
+        numbers2.style.letterSpacing = "2px";
+        numbers2.style.backgroundColor = "white";
+        numbers2.style.border = "none";
+        numbers2.maxLength = 4;
+
+        numbers2.addEventListener("input", () => {
+            secondNumbers.value = numbers2.value;
+        });
+
+
+
+        const numbers3 = document.createElement("textarea");
+        cardNumber.appendChild(numbers3);
+        numbers1.type = "number";
+        numbers3.placeholder = "____";
+        numbers3.style.width = "50px";
+        numbers3.style.height = "24px";
+        numbers3.style.resize = "none";
+        numbers3.style.fontSize = "15px";
+        numbers3.style.color = "rgba(151, 151, 151, 1)";
+        numbers3.style.textAlign = "center";
+        numbers3.style.letterSpacing = "2px";
+        numbers3.style.backgroundColor = "white";
+        numbers3.style.border = "none";
+        numbers3.maxLength = 4;
+
+        numbers3.addEventListener("input", () => {
+            thirdNumbers.value = numbers3.value;
+        });
+
+
+        const numbers4 = document.createElement("textarea");
+        cardNumber.appendChild(numbers4);
+        numbers4.type = "number";
+        numbers4.placeholder = "____";
+        numbers4.style.width = "50px";
+        numbers4.style.height = "24px";
+        numbers4.style.resize = "none";
+        numbers4.style.fontSize = "15px";
+        numbers4.style.color = "rgba(151, 151, 151, 1)";
+        numbers4.style.textAlign = "center";
+        numbers4.style.letterSpacing = "2px";
+        numbers4.style.backgroundColor = "white";
+        numbers4.style.border = "none";
+        numbers4.maxLength = 4;
+
+        numbers4.addEventListener("input", () => {
+            fourthNumbers.value = numbers4.value;
+        });
+
+
+        cardNumber.addEventListener("input", () => {
+            cardNumber.value = cardNumber.value;
+        });
+
+
+
+
+        const expAndCvv = document.createElement("div");
+        body.appendChild(expAndCvv);
+        expAndCvv.style.width = "341px";
+        expAndCvv.style.height = "48px";
+        expAndCvv.style.backgroundColor = "rgba(246, 246, 246, 1)";
+        expAndCvv.style.alignItems = "center";
+        expAndCvv.style.justifyContent = "space-between";
+        expAndCvv.style.display = "flex";
+        expAndCvv.style.flexDirection = "row";
+
+        const expDate = document.createElement("textarea");
+        expAndCvv.appendChild(expDate);
+        expDate.placeholder = "Exp.Date";
+        expDate.style.width = "162.5px";
+        expDate.style.height = "48px";
+        expDate.style.borderRadius = "7px";
+        expDate.style.border = "1px solid rgba(206, 206, 206, 1)";
+        expDate.style.backgroundColor = "white";
+        expDate.style.alignItems = "center";
+        expDate.style.justifyContent = "center";
+        expDate.style.fontFamily = "calibri";
+        expDate.style.fontSize = "16px";
+        expDate.style.resize = "none";
+        expDate.style.lineHeight = "48px";
+        expDate.style.color = "rgba(151, 151, 151, 1)";
+
+
+
+        const cvv = document.createElement("textarea");
+        expAndCvv.appendChild(cvv);
+        cvv.placeholder = "CVV";
+        cvv.style.width = "162.5px";
+        cvv.style.height = "48px";
+        cvv.style.borderRadius = "7px";
+        cvv.style.border = "1px solid rgba(206, 206, 206, 1)";
+        cvv.style.backgroundColor = "white";
+        cvv.style.alignItems = "center";
+        cvv.style.justifyContent = "center";
+        cvv.style.fontFamily = "calibri";
+        cvv.style.fontSize = "16px";
+        cvv.style.resize = "none";
+        cvv.style.lineHeight = "48px";
+        cvv.style.color = "rgba(151, 151, 151, 1)";
+        cvv.maxLength = 3;
+
+        const billing = document.createElement("div");
+        body.appendChild(billing);
+        billing.style.marginTop = "48px";
+        billing.style.width = "316.67px";
+        billing.style.height = "24px";
+        billing.style.display = "flex";
+        billing.style.alignItems = "center";
+
+        const box = document.createElement("div");
+        billing.appendChild(box);
+        box.style.width = "16px";
+        box.style.height = "17px";
+        box.style.borderRadius = "3px";
+        box.style.border = "2px solid black";
+        box.style.backgroundColor = "white";
+
+
+        box.onclick = () => {
+            if (box.style.backgroundColor === "white") {
+                box.style.backgroundColor = "black";
+            } else {
+                box.style.backgroundColor = "white";
+            }
+        };
+
+
+        const billingText = document.createElement("p");
+        billing.appendChild(billingText);
+        billingText.innerText = "Same as Billing Address";
+        billingText.style.fontSize = "15px";
+        billingText.style.fontFamily = "calibri";
+        billingText.style.fontWeight = "800";
+        billingText.style.marginLeft = "4.17px";
+
+
+
+        const BackAndNext = document.createElement("div");
+        body.appendChild(BackAndNext);
+        BackAndNext.style.width = "341px";
+        BackAndNext.style.height = "64px";
+        BackAndNext.style.backgroundColor = "rgba(246, 246, 246, 1)";
+        BackAndNext.style.alignItems = "center";
+        BackAndNext.style.justifyContent = "space-between";
+        BackAndNext.style.display = "flex";
+        BackAndNext.style.flexDirection = "row";
+        BackAndNext.style.marginTop = "64px";
+
+
+        const BackButton = document.createElement("div");
+        BackAndNext.appendChild(BackButton);
+        BackButton.style.width = "158.5px";
+        BackButton.style.height = "64px";
+        BackButton.style.borderRadius = "6px";
+        BackButton.innerText = "Back";
+        BackButton.style.border = "1px solid black";
+        BackButton.style.backgroundColor = "white";
+        BackButton.style.alignItems = "center";
+        BackButton.style.justifyContent = "center";
+        BackButton.style.display = "flex";
+        BackButton.style.flexDirection = "row";
+        BackButton.style.fontFamily = "calibri";
+        BackButton.style.fontSize = "18px";
+        BackButton.style.fontWeight = "550";
+
+        BackButton.onclick = () => {
+
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "step2.html";
+            window.location.href = url;
+
+        }
+
+
+        const NextButton = document.createElement("div");
+        BackAndNext.appendChild(NextButton);
+        NextButton.style.width = "158.5px";
+        NextButton.style.height = "64px";
+        NextButton.style.borderRadius = "6px";
+        NextButton.innerText = "Pay";
+        NextButton.style.border = "1px solid black";
+        NextButton.style.backgroundColor = "black";
+        NextButton.style.color = "white";
+        NextButton.style.alignItems = "center";
+        NextButton.style.justifyContent = "center";
+        NextButton.style.display = "flex";
+        NextButton.style.flexDirection = "row";
+        NextButton.style.fontFamily = "calibri";
+        NextButton.style.fontSize = "18px";
+        NextButton.style.fontWeight = "550";
+
+        const footer = document.createElement("img");
+        body.appendChild(footer);
+        footer.src = "footer.png";
+        footer.style.marginTop = "48px";
+
+
+
+        
+
+
+    </script>
+
+</body>
+</html>

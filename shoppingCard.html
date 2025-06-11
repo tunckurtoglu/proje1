@@ -62,8 +62,9 @@
         shoppingCard.innerText = "Shopping Cart";
         shoppingCard.style.marginLeft = "0px";
 
-        
 
+
+                let totalPrice = 0;
 
                 let cart = JSON.parse(localStorage.getItem("cart")) || [];
                 cart.forEach(product => {
@@ -71,13 +72,13 @@
 
                     const products = document.createElement("div");
                     body.appendChild(products);
-                    products.style.marginTop = "40px";
+                    products.style.marginTop = "0px";
                     products.style.display = "flex";
                     products.style.alignItems = "center";
                     products.style.width = "341px";
                     products.style.height = "152px";
-                    products.style.border = "1px solid purple";
-                    products.style.marginBottom = "80px";
+                    products.style.borderBottom = "1px solid rgba(163, 163, 163, 1)";
+                    products.style.marginBottom = "0px";
 
                     const productImageDiv = document.createElement("div");
                     products.appendChild(productImageDiv);
@@ -85,7 +86,6 @@
                     productImageDiv.style.alignItems = "center";
                     productImageDiv.style.width = "90px";
                     productImageDiv.style.height = "90px";
-                    productImageDiv.style.border = "1px solid purple";
 
                     const productInfos = document.createElement("div");
                     products.appendChild(productInfos);
@@ -93,8 +93,8 @@
                     productInfos.style.flexDirection = "column";
                     productInfos.style.width = "236px";
                     productInfos.style.height = "120px";
-                    productInfos.style.border = "1px solid purple";
                     productInfos.style.marginLeft = "15px";
+
                 const productImage = document.createElement("img");
                 productImageDiv.appendChild(productImage);
                     productImage.src = product.image;
@@ -105,19 +105,116 @@
                 productInfos.appendChild(productTitle);
                     productTitle.innerText = product.title;
 
-                const price = document.createElement("p");
-                productInfos.appendChild(price);
+
+                    const PriceAndQuantity = document.createElement("div");
+                    productInfos.appendChild(PriceAndQuantity);
+                    PriceAndQuantity.style.width = "232px";
+                    PriceAndQuantity.style.height = "32px";
+                    PriceAndQuantity.style.display = "flex";
+                    PriceAndQuantity.style.alignItems = "center";
+                    PriceAndQuantity.style.justifyContent = "space-between";
+
+
+                    const price = document.createElement("p");
+                    PriceAndQuantity.appendChild(price);
                     price.innerText = product.price + "$";
-                price.style.fontSize = "20px";
-                price.style.fontWeight = "700";
-                price.style.marginTop = "10px";
+                    price.style.fontSize = "20px";
+                    price.style.fontWeight = "700";
+                    price.style.marginLeft = "128px";
 
 
-            });
+              
+
+                    totalPrice += product.price;
+
+
+                    const close = document.createElement("img");
+                    PriceAndQuantity.appendChild(close);
+                    close.style.width = "24px";
+                    close.style.height = "24px";
+                    close.src = "close.png";
+
+                    close.onclick = () => {
+
+
+                        products.remove();
+
+                        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                        cart = cart.filter(item => item.title !== product.title);
+
+                        localStorage.setItem("cart", JSON.stringify(cart));
+
+
+                    }
+               
+
+
+
+                });
 
 
 
 
+        const totalOrder = document.createElement("div");
+        body.appendChild(totalOrder);
+        totalOrder.style.width = "341px";
+        totalOrder.style.height = "32px";
+        totalOrder.style.display = "flex";
+        totalOrder.style.flexDirection = "row";
+        totalOrder.style.alignItems = "center";
+        totalOrder.style.justifyContent = "space-between";
+        totalOrder.style.marginTop = "35px";
+
+
+        const totalText = document.createElement("p");
+        totalOrder.appendChild(totalText);
+        totalText.innerText = "Total";
+        totalText.style.fontFamily = "arial";
+        totalText.style.fontSize = "17px";
+        totalText.style.fontWeight = "600";
+        totalText.style.color = "rgba(0, 0, 0, 1)";
+
+
+        const totalPriceText = document.createElement("p");
+        totalOrder.appendChild(totalPriceText);
+        totalPriceText.innerText = totalPrice+"$";
+        totalPriceText.style.fontSize = "20px";
+        totalPriceText.style.color = "rgba(0, 0, 0, 1)";
+
+
+
+        const CheckoutButton = document.createElement("div");
+        body.appendChild(CheckoutButton);
+        CheckoutButton.style.width = "309px";
+        CheckoutButton.style.height = "56px";
+        CheckoutButton.style.borderRadius = "6px";
+        CheckoutButton.innerText = "Checkout";
+        CheckoutButton.style.backgroundColor = "black";
+        CheckoutButton.style.color = "white";
+        CheckoutButton.style.marginTop = "50px";
+        CheckoutButton.style.display = "flex";
+        CheckoutButton.style.alignItems = "center";
+        CheckoutButton.style.justifyContent = "center";
+        CheckoutButton.style.fontFamily = "arial";
+        CheckoutButton.style.fontSize = "16px";
+
+        CheckoutButton.onclick = () => {
+
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "step1.html";
+            window.location.href = url;
+
+        }
+
+      
+
+        const footer = document.createElement("img");
+        body.appendChild(footer);
+        footer.src = "footer.png";
+        footer.style.marginTop = "100px";
 
 
 
