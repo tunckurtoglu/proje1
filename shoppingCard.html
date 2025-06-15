@@ -6,6 +6,301 @@
     <title>Document</title>
 
     <style>
+
+        body {
+            width: 373px;
+            height: auto;
+            border: 1px solid rgba(181, 181, 181, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            width: 375px;
+            height: 88px;
+            border-bottom: 1px solid rgba(181, 181, 181, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .shoppingCardDiv {
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            width: 341px;
+            height: 24px;
+        }
+
+            .shoppingCardDiv h1 {
+                font-size: 24px;
+                margin-left: 0;
+            }
+
+        .products {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            width: 341px;
+            height: 152px;
+            border-bottom: 1px solid rgba(163, 163, 163, 1);
+        }
+
+        .productImageDiv {
+            display: flex;
+            align-items: center;
+            width: 90px;
+            height: 90px;
+        }
+
+        .productInfos {
+            display: flex;
+            flex-direction: column;
+            width: 236px;
+            height: 120px;
+            margin-left: 15px;
+        }
+
+        .PriceAndQuantity {
+            width: 232px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+            .PriceAndQuantity p {
+                font-size: 20px;
+                font-weight: 700;
+                margin-left: 128px;
+            }
+
+        .totalOrder {
+            width: 341px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 35px;
+        }
+
+            .totalOrder p:first-child {
+                font-size: 17px;
+                font-weight: 600;
+                color: black;
+            }
+
+            .totalOrder p:last-child {
+                font-size: 20px;
+                color: black;
+            }
+
+        .CheckoutButton {
+            width: 309px;
+            height: 56px;
+            border-radius: 6px;
+            background-color: black;
+            color: white;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .footer {
+            margin-top: 100px;
+        }
+
+        .search-button {
+            display: none;
+        }
+
+        .sections {
+            display: none;
+        }
+
+        .otherImg {
+            display: none;
+        }
+
+        .like {
+            display: none;
+        }
+
+        .card {
+            display: none;
+        }
+
+        .user {
+            display: none;
+        }
+
+         .subtotal {
+                display: none;
+                
+            }
+            .totalText {
+                display: block;
+                margin-right: 200px;
+                font-weight: 700;
+            }
+
+        .footer2 {
+            display: none;
+        }
+
+
+        @media (min-width:720px) {
+
+            body {
+                width: 1439px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .menu {
+                width: 1439px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .cyber {
+                margin-left: 160px;
+                width: 65.4px;
+                height: 22.87px;
+            }
+
+            .search-button {
+                display: block;
+                width: 372px;
+                height: 58px;
+                border: 1px solid rgba(181, 181, 181, 1);
+                margin-right: 62px;
+                margin-left: 62px;
+                display: flex;
+                align-items: center;
+                height: 56px;
+                font-size: 15px;
+                resize: none;
+            }
+
+            .sections {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                width: 351px;
+                height: 194px;
+                margin-right: 62px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .otherImg {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 180px;
+                width: 144px;
+                height: 32px;
+            }
+
+            .like {
+                display: block;
+                width: 20px;
+                height: 17px;
+            }
+
+            .card {
+                display: block;
+                width: 25px;
+                height: 22px;
+            }
+
+            .user {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+
+            .generalScreen {
+
+                width: 1120px;
+                height: 656px;
+                margin-top: 112px;
+                display:flex;
+                box-sizing: border-box;
+
+            }
+
+            .productsScreen {
+                width: 536px;
+                height: 656px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .checkoutScreen {
+                margin-top: 100px;
+                width: 536px;
+                height: 300px;
+                border: 1px solid rgba(159, 159, 159, 1);
+                display: flex;
+                flex-direction: column;
+                margin-left: 48px;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .taxAndTotal {
+                width: 500px;
+                height: 100px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .subtotal {
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+            }
+            .totalText {
+                display: block;
+                margin-right: 200px;
+                margin-left: 100px;
+                font-weight: 700;
+            }
+
+            .totalPriceText {
+                margin-right: 285px;
+            }
+
+            .CheckoutButton {
+                width: 408px;
+                margin-bottom: 50px;
+            }
+
+            .footer2 {
+                display: block;
+                margin-top: 200px;
+            }
+
+
+            .footer {
+                display: none;
+            }
+
+
+        }
     </style>
 </head>
 
@@ -15,207 +310,194 @@
 
     <script>
 
-        const body = document.querySelector("body");
-        body.style.width = "373px";
-        body.style.height = "auto";
-        body.style.border = "1px solid rgba(181, 181, 181, 1)";
-        body.style.display = "flex";
-        body.style.flexDirection = "column";
-        body.style.alignItems = "center";
+        const body = document.body;
 
         const menu = document.createElement("div");
+        menu.className = "menu";
         body.appendChild(menu);
-        menu.style.width = "375px";
-        menu.style.height = "88px";
-        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
-        menu.style.alignItems = "center";
-        menu.style.justifyContent = "space-between";
-        menu.style.display = "flex";
-        menu.style.flexDirection = "row";
 
 
         const cyber = document.createElement("img");
-        menu.appendChild(cyber);
         cyber.src = "Logo Vector.png";
-        cyber.style.width = "65.4px";
-        cyber.style.height = "22.87px";
+        cyber.style.width = "65px";
+        cyber.style.height = "23px";
         cyber.style.marginLeft = "16px";
+        menu.appendChild(cyber);
+
+
+        const searchButton = document.createElement("textarea");
+        searchButton.className = "search-button";
+        menu.appendChild(searchButton);
+        searchButton.placeholder = "Search";
+
+
+        const sections = document.createElement("div");
+        menu.appendChild(sections);
+        sections.className = "sections";
+
+        const home = document.createElement("p");
+        sections.appendChild(home);
+        home.innerText = "Home";
+
+        const about = document.createElement("p");
+        sections.appendChild(about);
+        about.innerText = "About";
+
+        const contactUs = document.createElement("p");
+        sections.appendChild(contactUs);
+        contactUs.innerText = "Contact Us";
+
+        const blog = document.createElement("p");
+        sections.appendChild(blog);
+        blog.innerText = "Blog";
+
+        const otherImg = document.createElement("div");
+        menu.appendChild(otherImg);
+        otherImg.className = "otherImg";
+
+        const like = document.createElement("img");
+        otherImg.appendChild(like);
+        like.src = "like.png";
+        like.className = "like";
+
+        const card = document.createElement("img");
+        otherImg.appendChild(card);
+        card.src = "card.png";
+        card.className = "card";
+
+        card.onclick = () => {
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "shoppingCard.html";
+            window.location.href = url;
+        }
+
+        const user = document.createElement("img");
+        otherImg.appendChild(user);
+        user.src = "User.png";
+        user.className = "user";
 
         const burger = document.createElement("img");
-        menu.appendChild(burger);
         burger.src = "Burger.png";
         burger.style.width = "40px";
         burger.style.height = "40px";
         burger.style.marginRight = "24px";
+        menu.appendChild(burger);
+
+        const generalScreen = document.createElement("div");
+        generalScreen.className = "generalScreen";
+        body.appendChild(generalScreen);
+
+        const productsScreen = document.createElement("div");
+        productsScreen.className = "productsScreen";
+        generalScreen.appendChild(productsScreen);
+
+        const checkoutScreen = document.createElement("div");
+        checkoutScreen.className = "checkoutScreen";
+        generalScreen.appendChild(checkoutScreen);
+
+        const subtotal = document.createElement("p");
+        subtotal.innerText = "Subtotal";
+        checkoutScreen.appendChild(subtotal);
+        subtotal.className = "subtotal";
+
+        const taxAndTotal = document.createElement("div");
+        taxAndTotal.className = "taxAndTotal";
+        checkoutScreen.appendChild(taxAndTotal);
 
         const shoppingCardDiv = document.createElement("div");
-        body.appendChild(shoppingCardDiv);
-        shoppingCardDiv.style.marginTop = "40px";
-        shoppingCardDiv.style.display = "flex";
-        shoppingCardDiv.style.alignItems = "center";
-        shoppingCardDiv.style.width = "341px";
-        shoppingCardDiv.style.height = "24px";
+        shoppingCardDiv.className = "shoppingCardDiv";
+        generalScreen.appendChild(shoppingCardDiv);
 
         const shoppingCard = document.createElement("h1");
-        shoppingCardDiv.appendChild(shoppingCard);
-        shoppingCard.style.fontSize = "24px";
         shoppingCard.innerText = "Shopping Cart";
-        shoppingCard.style.marginLeft = "0px";
+        productsScreen.appendChild(shoppingCard);
 
+        let totalPrice = 0;
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
+        cart.forEach(product => {
 
-                let totalPrice = 0;
+            const products = document.createElement("div");
+            products.className = "products";
+            productsScreen.appendChild(products);
 
-                let cart = JSON.parse(localStorage.getItem("cart")) || [];
-                cart.forEach(product => {
+            const productImageDiv = document.createElement("div");
+            productImageDiv.className = "productImageDiv";
+            products.appendChild(productImageDiv);
 
+            const productImage = document.createElement("img");
+            productImage.src = product.image;
+            productImage.style.width = "90px";
+            productImage.style.height = "90px";
+            productImageDiv.appendChild(productImage);
 
-                    const products = document.createElement("div");
-                    body.appendChild(products);
-                    products.style.marginTop = "0px";
-                    products.style.display = "flex";
-                    products.style.alignItems = "center";
-                    products.style.width = "341px";
-                    products.style.height = "152px";
-                    products.style.borderBottom = "1px solid rgba(163, 163, 163, 1)";
-                    products.style.marginBottom = "0px";
+            const productInfos = document.createElement("div");
+            productInfos.className = "productInfos";
+            products.appendChild(productInfos);
 
-                    const productImageDiv = document.createElement("div");
-                    products.appendChild(productImageDiv);
-                    productImageDiv.style.display = "flex";
-                    productImageDiv.style.alignItems = "center";
-                    productImageDiv.style.width = "90px";
-                    productImageDiv.style.height = "90px";
+            const productTitle = document.createElement("p");
+            productTitle.innerText = product.title;
+            productInfos.appendChild(productTitle);
 
-                    const productInfos = document.createElement("div");
-                    products.appendChild(productInfos);
-                    productInfos.style.display = "flex";
-                    productInfos.style.flexDirection = "column";
-                    productInfos.style.width = "236px";
-                    productInfos.style.height = "120px";
-                    productInfos.style.marginLeft = "15px";
+            const PriceAndQuantity = document.createElement("div");
+            PriceAndQuantity.className = "PriceAndQuantity";
+            productInfos.appendChild(PriceAndQuantity);
 
-                const productImage = document.createElement("img");
-                productImageDiv.appendChild(productImage);
-                    productImage.src = product.image;
-                productImage.style.width = "90px";
-                productImage.style.height = "90px";
+            const price = document.createElement("p");
+            price.innerText = product.price + "$";
+            PriceAndQuantity.appendChild(price);
 
-                const productTitle = document.createElement("p");
-                productInfos.appendChild(productTitle);
-                    productTitle.innerText = product.title;
+            totalPrice += product.price;
 
+            const close = document.createElement("img");
+            close.src = "close.png";
+            close.style.width = "24px";
+            close.style.height = "24px";
+            PriceAndQuantity.appendChild(close);
 
-                    const PriceAndQuantity = document.createElement("div");
-                    productInfos.appendChild(PriceAndQuantity);
-                    PriceAndQuantity.style.width = "232px";
-                    PriceAndQuantity.style.height = "32px";
-                    PriceAndQuantity.style.display = "flex";
-                    PriceAndQuantity.style.alignItems = "center";
-                    PriceAndQuantity.style.justifyContent = "space-between";
+            close.onclick = () => {
+                products.remove();
+                let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+                newCart = newCart.filter(item => item.title !== product.title);
+                localStorage.setItem("cart", JSON.stringify(newCart));
+            };
+        });
 
-
-                    const price = document.createElement("p");
-                    PriceAndQuantity.appendChild(price);
-                    price.innerText = product.price + "$";
-                    price.style.fontSize = "20px";
-                    price.style.fontWeight = "700";
-                    price.style.marginLeft = "128px";
-
-
-              
-
-                    totalPrice += product.price;
-
-
-                    const close = document.createElement("img");
-                    PriceAndQuantity.appendChild(close);
-                    close.style.width = "24px";
-                    close.style.height = "24px";
-                    close.src = "close.png";
-
-                    close.onclick = () => {
-
-
-                        products.remove();
-
-                        let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-                        cart = cart.filter(item => item.title !== product.title);
-
-                        localStorage.setItem("cart", JSON.stringify(cart));
-
-
-                    }
-               
-
-
-
-                });
-
-
-
-
+       
         const totalOrder = document.createElement("div");
-        body.appendChild(totalOrder);
-        totalOrder.style.width = "341px";
-        totalOrder.style.height = "32px";
-        totalOrder.style.display = "flex";
-        totalOrder.style.flexDirection = "row";
-        totalOrder.style.alignItems = "center";
-        totalOrder.style.justifyContent = "space-between";
-        totalOrder.style.marginTop = "35px";
-
+        totalOrder.className = "totalOrder";
+        taxAndTotal.appendChild(totalOrder);
 
         const totalText = document.createElement("p");
-        totalOrder.appendChild(totalText);
         totalText.innerText = "Total";
-        totalText.style.fontFamily = "arial";
-        totalText.style.fontSize = "17px";
-        totalText.style.fontWeight = "600";
-        totalText.style.color = "rgba(0, 0, 0, 1)";
-
+        taxAndTotal.appendChild(totalText);
+        totalText.className = "totalText";
 
         const totalPriceText = document.createElement("p");
-        totalOrder.appendChild(totalPriceText);
-        totalPriceText.innerText = totalPrice+"$";
-        totalPriceText.style.fontSize = "20px";
-        totalPriceText.style.color = "rgba(0, 0, 0, 1)";
-
-
+        totalPriceText.innerText = totalPrice + "$";
+        taxAndTotal.appendChild(totalPriceText);
+        totalPriceText.className = "totalPriceText";
 
         const CheckoutButton = document.createElement("div");
-        body.appendChild(CheckoutButton);
-        CheckoutButton.style.width = "309px";
-        CheckoutButton.style.height = "56px";
-        CheckoutButton.style.borderRadius = "6px";
+        CheckoutButton.className = "CheckoutButton";
         CheckoutButton.innerText = "Checkout";
-        CheckoutButton.style.backgroundColor = "black";
-        CheckoutButton.style.color = "white";
-        CheckoutButton.style.marginTop = "50px";
-        CheckoutButton.style.display = "flex";
-        CheckoutButton.style.alignItems = "center";
-        CheckoutButton.style.justifyContent = "center";
-        CheckoutButton.style.fontFamily = "arial";
-        CheckoutButton.style.fontSize = "16px";
+        checkoutScreen.appendChild(CheckoutButton);
 
         CheckoutButton.onclick = () => {
-
-
-            const urlParams = new URLSearchParams(window.location.search);
-
-            let url = "step1.html";
-            window.location.href = url;
-
-        }
-
-      
+            window.location.href = "step1.html";
+        };
 
         const footer = document.createElement("img");
-        body.appendChild(footer);
+        footer.className = "footer";
         footer.src = "footer.png";
-        footer.style.marginTop = "100px";
+        body.appendChild(footer);
 
+        const footer2 = document.createElement("img");
+        body.appendChild(footer2);
+        footer2.src = "footer2.png";
+        footer2.className = "footer2";
 
 
     </script>

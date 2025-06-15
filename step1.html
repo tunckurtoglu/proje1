@@ -6,6 +6,329 @@
     <title>Document</title>
 
     <style>
+
+        body {
+            width: 373px;
+            height: auto;
+            border: 1px solid rgba(181, 181, 181, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: Calibri, sans-serif;
+        }
+
+        .menu {
+            width: 375px;
+            height: 88px;
+            border-bottom: 1px solid rgba(181, 181, 181, 1);
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            width: 65.4px;
+            height: 22.87px;
+            margin-left: 16px;
+        }
+
+        .burger {
+            width: 40px;
+            height: 40px;
+            margin-right: 24px;
+        }
+
+        .search-button {
+            display: none;
+       
+        }
+
+
+        .steps {
+            width: 373px;
+            height: 104px;
+        }
+
+        .title-area {
+            width: 341px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .title-text {
+            font-family: Arial;
+            font-size: 21px;
+        }
+
+        .address-area {
+            width: 341px;
+            margin-top: 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .address-box {
+            width: 341px;
+            height: 192px;
+            background-color: rgba(246, 246, 246, 1);
+            display: flex;
+            flex-direction: row;
+            border-radius: 7px;
+        }
+
+        .address-input {
+            width: 221px;
+            height: 144px;
+            margin-left: 24px;
+            margin-top: 24px;
+            background-color: rgba(246, 246, 246, 1);
+            border: 0px;
+            resize: none;
+            font-family: Calibri;
+            font-size: 14px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-top: 87px;
+        }
+
+        .icon-close {
+            margin-left: 24px;
+        }
+
+        .new-line {
+            width: 341px;
+            height: 48px;
+            margin-top: 48px;
+            cursor: pointer;
+        }
+
+        .button-group {
+            width: 341px;
+            height: 64px;
+            background-color: rgba(246, 246, 246, 1);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 64px;
+        }
+
+        .button {
+            width: 158.5px;
+            height: 64px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Calibri;
+            font-size: 18px;
+            font-weight: 550;
+            cursor: pointer;
+        }
+
+        .back-button {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .next-button {
+            background-color: black;
+            border: 1px solid black;
+            color: white;
+        }
+        
+        .footer {
+            margin-top: 48px;
+        }
+
+        .step1 {
+            display: none;
+        }
+
+
+        .footer2 {
+            display: none;
+        }
+
+        .sections {
+            display: none;
+           
+        }
+
+        .otherImg {
+            display: none;
+        }
+
+        .like {
+            display: none;
+        }
+
+        .card {
+            display: none;
+        }
+
+        .user {
+            display: none;
+        }
+
+        .steps {
+            display: none;
+        }
+
+
+        @media (min-width:720px) {
+
+            body {
+                width: 1439px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .menu {
+                width: 1439px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .logo {
+                margin-left: 160px;
+                width: 65.4px;
+                height: 22.87px;
+            }
+
+            .burger {
+                display: none;
+            }
+
+            .search-button {
+                display: block;
+                width: 372px;
+                height: 58px;
+                border: 1px solid rgba(181, 181, 181, 1);
+                margin-right: 62px;
+                margin-left: 62px;
+                display: flex;
+                align-items: center;
+                height: 56px;
+                font-size: 15px;
+                resize: none;
+            }
+
+            .sections {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                width: 351px;
+                height: 194px;
+                margin-right: 62px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .otherImg {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 180px;
+                width: 144px;
+                height: 32px;
+            }
+
+            .like {
+                display: block;
+                width: 20px;
+                height: 17px;
+            }
+
+            .card {
+                display: block;
+                width: 25px;
+                height: 22px;
+            }
+
+            .user {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+
+            .steps {
+                display: none;
+            }
+
+            .step1 {
+                display: block;
+            }
+
+            .title-area {
+                width: 1120px;
+                height: 24px;
+                display: flex;
+                flex-direction: row;
+            }
+
+
+            .address-box {
+                width: 1120px;
+                height: 144px;
+                background-color: rgba(246, 246, 246, 1);
+                display: flex;
+                flex-direction: row;
+                border-radius: 7px;
+            }
+
+            .address-input {
+                width: 1120px;
+                height: 144px;
+                margin-left: 24px;
+                margin-top: 24px;
+                background-color: rgba(246, 246, 246, 1);
+                border: 0px;
+                resize: none;
+                font-family: Calibri;
+                font-size: 14px;
+            }
+
+            .button-group {
+                width: 341px;
+                height: 64px;
+                background-color: rgba(246, 246, 246, 1);
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                margin-left: 684px;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .footer2 {
+                display: block;
+                margin-top: 100px;
+            }
+
+            .Search {
+                display: block;
+            }
+
+        }
+
+
+
     </style>
 </head>
 
@@ -14,285 +337,207 @@
 
     <script>
 
-        const body = document.querySelector("body");
-        body.style.width = "373px";
-        body.style.height = "auto";
-        body.style.border = "1px solid rgba(181, 181, 181, 1)";
-        body.style.display = "flex";
-        body.style.flexDirection = "column";
-        body.style.alignItems = "center";
+        document.body.className = "body";
 
         const menu = document.createElement("div");
-        body.appendChild(menu);
-        menu.style.width = "375px";
-        menu.style.height = "88px";
-        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
-        menu.style.alignItems = "center";
-        menu.style.justifyContent = "space-between";
-        menu.style.display = "flex";
-        menu.style.flexDirection = "row";
+        menu.className = "menu";
+        document.body.appendChild(menu);
 
 
-        const cyber = document.createElement("img");
-        menu.appendChild(cyber);
-        cyber.src = "Logo Vector.png";
-        cyber.style.width = "65.4px";
-        cyber.style.height = "22.87px";
-        cyber.style.marginLeft = "16px";
+        const logo = document.createElement("img");
+        logo.src = "Logo Vector.png";
+        logo.className = "logo";
+        menu.appendChild(logo);
 
-        const burger = document.createElement("img");
-        menu.appendChild(burger);
-        burger.src = "Burger.png";
-        burger.style.width = "40px";
-        burger.style.height = "40px";
-        burger.style.marginRight = "24px";
-
-        const step1 = document.createElement("img");
-        body.appendChild(step1);
-        step1.style.width = "373px";
-        step1.style.height = "104px";
-        step1.src = "Steps.png";
-
-        const h2Div = document.createElement("div");
-        body.appendChild(h2Div);
-        h2Div.style.width = "341px";
-        h2Div.style.height = "24px";
-        h2Div.style.display = "flex";
-        h2Div.style.flexDirection = "row";
-       
-
-        const h2  = document.createElement("p");
-        h2Div.appendChild(h2);
-        h2.style.fontFamily = "arial";
-        h2.style.fontSize = "21px";
-        h2.innerText = "Select Adress";
-
-        const adressArea = document.createElement("div");
-        body.appendChild(adressArea);
-        adressArea.style.width = "341px";
-        adressArea.style.marginTop = "48px";
-        adressArea.id = "new";
-        adressArea.style.marginTop = "32px";
-        adressArea.style.display = "flex";
-        adressArea.style.flexDirection = "column";
-        adressArea.style.alignItems = "center";
-        adressArea.style.justifyContent = "center";
+        const searchButton = document.createElement("textarea");
+        searchButton.className = "search-button";
+        menu.appendChild(searchButton);
+        searchButton.placeholder = "Search";
 
 
-        const adress = document.createElement("div");
-        adressArea.appendChild(adress);
-        adress.style.width = "341px";
-        adress.style.height = "192px";
-        adress.style.backgroundColor = "rgba(246, 246, 246, 1)";
-        adress.style.display = "flex";
-        adress.style.flexDirection = "row";
-        adress.style.borderRadius = "7px";
+        const sections = document.createElement("div");
+        menu.appendChild(sections);
+        sections.className = "sections";
 
+        const home = document.createElement("p");
+        sections.appendChild(home);
+        home.innerText = "Home";
 
-        const input = document.createElement("textarea");
-        input.type = "text";
-        input.id = "addressInput";
-        input.placeholder = "Insert Your Address...";
-        adress.appendChild(input);
-        input.style.width = "221px";
-        input.style.height = "144px";
-        input.style.marginLeft = "24px";
-        input.style.marginTop = "24px";
-        input.style.backgroundColor = "rgba(246, 246, 246, 1)";
-        input.style.border = "0px";
+        const about = document.createElement("p");
+        sections.appendChild(about);
+        about.innerText = "About";
 
+        const contactUs = document.createElement("p");
+        sections.appendChild(contactUs);
+        contactUs.innerText = "Contact Us";
 
-        input.addEventListener("input", () => {
-            localStorage.setItem("savedAddress", input.value);
-        });
+        const blog = document.createElement("p");
+        sections.appendChild(blog);
+        blog.innerText = "Blog";
 
-        const saved = localStorage.getItem("savedAddress");
-        if (saved) {
-            input.value = saved;
-        }
+        const otherImg = document.createElement("div");
+        menu.appendChild(otherImg);
+        otherImg.className = "otherImg";
 
-        const pen = document.createElement("img");
-        adress.appendChild(pen);
-        pen.style.width = "24px";
-        pen.style.height = "24px";
-        pen.style.marginLeft = "0px";
-        pen.style.marginTop = "87px";
-        pen.src = "To edit.png";
+        const like = document.createElement("img");
+        otherImg.appendChild(like);
+        like.src = "like.png";
+        like.className = "like";
 
-        pen.onclick = () => {
+        const card = document.createElement("img");
+        otherImg.appendChild(card);
+        card.src = "card.png";
+        card.className = "card";
 
-            const adressinput = document.getElementById("addressInput");
-            adressinput.focus();
-
-
-        }
-
-        const close = document.createElement("img");
-        adress.appendChild(close);
-        close.style.width = "24px";
-        close.style.height = "24px";
-        close.style.marginLeft = "24px";
-        close.style.marginTop = "87px";
-        close.src = "close.png";
-
-        
-        const newAdressLine = document.createElement("img");
-        adressArea.appendChild(newAdressLine);
-        newAdressLine.style.width = "341px";
-        newAdressLine.style.height = "48px";
-        newAdressLine.style.marginTop = "48px";
-        newAdressLine.src = "line.png";
-        newAdressLine.id = "new";
-
-
-        newAdressLine.onclick = () => {
-
-            const openAdressNew = document.createElement("div");
-            adressArea.appendChild(openAdressNew);
-            openAdressNew.style.width = "341px";
-            openAdressNew.style.height = "192px";
-            openAdressNew.style.backgroundColor = "rgba(246, 246, 246, 1)";
-            openAdressNew.style.display = "flex";
-            openAdressNew.style.flexDirection = "row";
-            openAdressNew.style.borderRadius = "7px";
-            openAdressNew.style.marginTop = "24px";
-            openAdressNew.style.marginBottom = "24px";
-
-            const inputNew = document.createElement("textarea");
-            inputNew.type = "text";
-            inputNew.id = "addressInputNew";
-            inputNew.placeholder = "Insert Your Address...";
-            openAdressNew.appendChild(inputNew);
-            inputNew.style.width = "221px";
-            inputNew.style.height = "144px";
-            inputNew.style.marginLeft = "24px";
-            inputNew.style.marginTop = "24px";
-            inputNew.style.backgroundColor = "rgba(246, 246, 246, 1)";
-            inputNew.style.border = "0px";
-
-            inputNew.addEventListener("input", () => {
-                localStorage.setItem("savedAddress2", inputNew.value);
-            });
-
-            const saved = localStorage.getItem("savedAddress2");
-            if (saved) {
-                inputNew.value = saved;
-            }
-
-
-            const penNew = document.createElement("img");
-            openAdressNew.appendChild(penNew);
-            penNew.style.width = "24px";
-            penNew.style.height = "24px";
-            penNew.style.marginLeft = "0px";
-            penNew.style.marginTop = "87px";
-            penNew.src = "To edit.png";
-
-            const closeNew = document.createElement("img");
-            openAdressNew.appendChild(closeNew);
-            closeNew.style.width = "24px";
-            closeNew.style.height = "24px";
-            closeNew.style.marginLeft = "24px";
-            closeNew.style.marginTop = "87px";
-            closeNew.src = "close.png";
-        
-
-            penNew.onclick = () => {
-
-
-                const inputInsideThisContainer = penNew.parentElement.querySelector("textarea");
-                inputInsideThisContainer.focus();
-
-
-
-            }
-
-            closeNew.onclick = () => {
-
-
-                closeNew.parentElement.remove();
-                
-            }
-
-
-
-        }
-
-       
-
-
-        const BackAndNext = document.createElement("div");
-        body.appendChild(BackAndNext);
-        BackAndNext.style.width = "341px";
-        BackAndNext.style.height = "64px";
-        BackAndNext.style.backgroundColor = "rgba(246, 246, 246, 1)";
-        BackAndNext.style.alignItems = "center";
-        BackAndNext.style.justifyContent = "space-between";
-        BackAndNext.style.display = "flex";
-        BackAndNext.style.flexDirection = "row";
-        BackAndNext.style.marginTop = "64px";
-
-
-        const BackButton = document.createElement("div");
-        BackAndNext.appendChild(BackButton);
-        BackButton.style.width = "158.5px";
-        BackButton.style.height = "64px";
-        BackButton.style.borderRadius = "6px";
-        BackButton.innerText = "Back";
-        BackButton.style.border = "1px solid black";
-        BackButton.style.backgroundColor = "white";
-        BackButton.style.alignItems = "center";
-        BackButton.style.justifyContent = "center";
-        BackButton.style.display = "flex";
-        BackButton.style.flexDirection = "row";
-        BackButton.style.fontFamily = "calibri";
-        BackButton.style.fontSize = "18px";
-        BackButton.style.fontWeight = "550";
-
-        BackButton.onclick = () => {
-
+        card.onclick = () => {
 
             const urlParams = new URLSearchParams(window.location.search);
 
             let url = "shoppingCard.html";
             window.location.href = url;
-
         }
 
-
-        const NextButton = document.createElement("div");
-        BackAndNext.appendChild(NextButton);
-        NextButton.style.width = "158.5px";
-        NextButton.style.height = "64px";
-        NextButton.style.borderRadius = "6px";
-        NextButton.innerText = "Next";
-        NextButton.style.border = "1px solid black";
-        NextButton.style.backgroundColor = "black";
-        NextButton.style.color = "white";
-        NextButton.style.alignItems = "center";
-        NextButton.style.justifyContent = "center";
-        NextButton.style.display = "flex";
-        NextButton.style.flexDirection = "row";
-        NextButton.style.fontFamily = "calibri";
-        NextButton.style.fontSize = "18px";
-        NextButton.style.fontWeight = "550";
-
-        NextButton.onclick = () => {
+        const step1 = document.createElement("img");
+        document.body.appendChild(step1);
+        step1.src = "stepsmasaustu1.png";
+        step1.className = "step1";
 
 
-            const urlParams = new URLSearchParams(window.location.search);
+        const burger = document.createElement("img");
+        burger.src = "Burger.png";
+        burger.className = "burger";
+        menu.appendChild(burger);
 
-            let url = "step2.html";
-            window.location.href = url;
+        const user = document.createElement("img");
+        otherImg.appendChild(user);
+        user.src = "User.png";
+        user.className = "user";
 
-        }
+
+        const steps = document.createElement("img");
+        steps.src = "Steps.png";
+        steps.className = "steps";
+        document.body.appendChild(steps);
+
+        const titleArea = document.createElement("div");
+        titleArea.className = "title-area";
+        document.body.appendChild(titleArea);
+
+
+        const title = document.createElement("p");
+        title.innerText = "Select Adress";
+        title.className = "title-text";
+        titleArea.appendChild(title);
+
+
+        const addressArea = document.createElement("div");
+        addressArea.className = "address-area";
+
+        const addressBox = document.createElement("div");
+        addressBox.className = "address-box";
+        addressArea.appendChild(addressBox);
+
+
+        const textarea = document.createElement("textarea");
+        textarea.placeholder = "Insert Your Address...";
+        textarea.className = "address-input";
+        textarea.id = "addressInput";
+        addressBox.appendChild(textarea);
+
+
+        const pen = document.createElement("img");
+        pen.src = "To edit.png";
+        pen.className = "icon";
+        addressBox.appendChild(pen);
+
+
+        const close = document.createElement("img");
+        close.src = "close.png";
+        close.className = "icon icon-close";
+        addressBox.appendChild(close);
+
+
+        textarea.addEventListener("input", () => {
+            localStorage.setItem("savedAddress", textarea.value);
+        });
+
+        const saved = localStorage.getItem("savedAddress");
+        if (saved) textarea.value = saved;
+
+        pen.onclick = () => textarea.focus();
+        close.onclick = () => textarea.value = "";
+
+
+        const line = document.createElement("img");
+        line.src = "line.png";
+        line.className = "new-line";
+
+        line.onclick = () => {
+            const newBox = document.createElement("div");
+            newBox.className = "address-box";
+
+            const newInput = document.createElement("textarea");
+            newInput.placeholder = "Insert Your Address...";
+            newInput.className = "address-input";
+
+            const newPen = document.createElement("img");
+            newPen.src = "To edit.png";
+            newPen.className = "icon";
+
+            const newClose = document.createElement("img");
+            newClose.src = "close.png";
+            newClose.className = "icon icon-close";
+
+            newInput.addEventListener("input", () => {
+                localStorage.setItem("savedAddress2", newInput.value);
+            });
+
+            const saved2 = localStorage.getItem("savedAddress2");
+            if (saved2) newInput.value = saved2;
+
+            newPen.onclick = () => newInput.focus();
+            newClose.onclick = () => newBox.remove();
+
+            newBox.appendChild(newInput);
+            newBox.appendChild(newPen);
+            newBox.appendChild(newClose);
+            addressArea.appendChild(newBox);
+        };
+
+        addressArea.appendChild(line);
+        document.body.appendChild(addressArea);
+
+        const buttons = document.createElement("div");
+        buttons.className = "button-group";
+
+        const backBtn = document.createElement("div");
+        backBtn.className = "button back-button";
+        backBtn.innerText = "Back";
+        backBtn.onclick = () => {
+            window.location.href = "shoppingCard.html";
+        };
+
+        const nextBtn = document.createElement("div");
+        nextBtn.className = "button next-button";
+        nextBtn.innerText = "Next";
+        nextBtn.onclick = () => {
+            window.location.href = "step2.html";
+        };
+
+        buttons.appendChild(backBtn);
+        buttons.appendChild(nextBtn);
+        document.body.appendChild(buttons);
 
         const footer = document.createElement("img");
-        body.appendChild(footer);
         footer.src = "footer.png";
-        footer.style.marginTop = "48px";
+        footer.className = "footer";
+        document.body.appendChild(footer);
 
 
+        const footer2 = document.createElement("img");
+        document.body.appendChild(footer2);
+        footer2.src = "footer2.png";
+        footer2.className = "footer2";
   
 
 

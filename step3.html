@@ -6,6 +6,490 @@
     <title>Document</title>
 
     <style>
+
+        body {
+            width: 373px;
+            height: auto;
+            border: 1px solid rgba(181, 181, 181, 1);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .menu {
+            width: 375px;
+            height: 88px;
+            border-bottom: 1px solid rgba(181, 181, 181, 1);
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .cyber {
+            width: 65.4px;
+            height: 22.87px;
+            margin-left: 16px;
+        }
+
+        .burger {
+            width: 40px;
+            height: 40px;
+            margin-right: 24px;
+        }
+
+        .step3 {
+            width: 373px;
+            height: 104px;
+        }
+
+        .h2Div {
+            width: 341px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .h2 {
+            font-family: arial;
+            font-size: 21px;
+        }
+
+        .creditCard {
+            width: 337px;
+            height: 188.28px;
+            display: flex;
+            flex-direction: column;
+            border-radius: 15.81px;
+            border: 1px solid rgba(209, 209, 216, 1);
+            margin-top: 32px;
+            background-color: black;
+            background-image: url('cardLine.png');
+            background-repeat: no-repeat;
+            background-position: 110px;
+        }
+
+        .upperImg {
+            width: 298px;
+            height: 59px;
+            display: flex;
+            margin-left: 22.47px;
+            margin-top: 23.42px;
+        }
+
+        .image {
+            width: 20.5px;
+            height: 20.5px;
+        }
+
+        .image2 {
+            width: 24px;
+            height: 24px;
+        }
+
+        .cardNumbers {
+            width: 298px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            margin-left: 22.41px;
+            margin-top: 16.78px;
+            justify-content: space-between;
+        }
+
+        .firstNumbers, .secondNumbers, .thirdNumbers, .fourthNumbers {
+            width: 60px;
+            height: 24px;
+            maxLength: 4;
+            resize: none;
+            font-size: 15px;
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
+            background-color: transparent;
+            border: none;
+        }
+
+        .holder {
+            width: 298px;
+            height: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 22.99px;
+            margin-left: 22.41px;
+        }
+
+        .name {
+            width: 250px;
+            height: 23px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            resize: none;
+            font-size: 13px;
+            color: white;
+            background-color: transparent;
+            border: none;
+        }
+
+        .icon {
+            width: 40.24px;
+            height: 24.99px;
+        }
+
+        .holderName {
+            width: 341px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: rgba(151, 151, 151, 1);
+            background-color: white;
+            resize: none;
+            border: 1px solid rgba(206, 206, 206, 1);
+            margin-top: 40px;
+            margin-bottom: 16px;
+            justify-content: center;
+            font-family: calibri;
+            line-height: 48px;
+        }
+
+        .cardNumber {
+            width: 341px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            color: black;
+            background-color: white;
+            resize: none;
+            border: 1px solid rgba(206, 206, 206, 1);
+            margin-bottom: 16px;
+            line-height: 48px;
+        }
+
+        .cardNumberText {
+            font-family: arial;
+            color: rgba(151, 151, 151, 1);
+            font-size: 14px;
+        }
+
+        .numbers1, .numbers2, .numbers3, .numbers4 {
+            width: 50px;
+            height: 24px;
+            resize: none;
+            font-size: 15px;
+            color: rgba(151, 151, 151, 1);
+            text-align: center;
+            background-color: white;
+            border: none;
+            maxLength: 4;
+        }
+
+        .expAndCvv {
+            width: 341px;
+            height: 48px;
+            background-color: rgba(246, 246, 246, 1);
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .expDate, .cvv {
+            width: 162.5px;
+            height: 48px;
+            border-radius: 7px;
+            border: 1px solid rgba(206, 206, 206, 1);
+            background-color: white;
+            align-items: center;
+            justify-content: center;
+            font-family: calibri;
+            font-size: 16px;
+            resize: none;
+            line-height: 48px;
+            color: rgba(151, 151, 151, 1);
+        }
+
+        .billing {
+            margin-top: 48px;
+            width: 316.67px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        .box {
+            width: 16px;
+            height: 17px;
+            border-radius: 3px;
+            border: 2px solid black;
+            background-color: white;
+        }
+
+        .billingText {
+            font-size: 15px;
+            font-family: calibri;
+            font-weight: 800;
+            margin-left: 4.17px;
+        }
+
+        .BackAndNext {
+            width: 341px;
+            height: 64px;
+            background-color: rgba(246, 246, 246, 1);
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            margin-top: 64px;
+        }
+
+        .BackButton, .NextButton {
+            width: 158.5px;
+            height: 64px;
+            border-radius: 6px;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: row;
+            font-family: calibri;
+            font-size: 18px;
+            font-weight: 550;
+        }
+
+        .BackButton {
+            background-color: white;
+        }
+
+        .NextButton {
+            background-color: black;
+            color: white;
+        }
+
+        .footer {
+            margin-top: 48px;
+        }
+
+        .step1{
+            display: none;
+        }
+
+        .footer2 {
+            display: none;
+        }
+
+        .products {
+            display: none;
+        }
+
+        .productImageDiv {
+            display: none;
+        }
+
+        .productImageDiv {
+            display: none;
+        }
+
+        .productInfos {
+            display: none;
+        }
+
+        .productTitle {
+            display: none;
+        }
+
+        .PriceAndQuantity {
+            display: none;
+        }
+
+        .PriceAndQuantity {
+            display: none;
+        }
+
+
+        .close {
+            display: none;
+        }
+
+        .totalPriceText {
+            display: none;
+        }
+
+        .like {
+            display: none;
+        }
+
+        .card {
+            display: none;
+        }
+
+        .sections {
+            display: none;
+        }
+
+        .user {
+            display: none;
+        }
+
+        @media (min-width:720px) {
+            body {
+                width: 1439px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .menu {
+                width: 1439px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .cyber {
+                margin-left: 160px;
+                width: 65.4px;
+                height: 22.87px;
+            }
+
+            .burger {
+                display: none;
+            }
+
+            .search-button {
+                display: block;
+                width: 372px;
+                height: 58px;
+                border: 1px solid rgba(181, 181, 181, 1);
+                margin-right: 62px;
+                margin-left: 62px;
+                display: flex;
+                align-items: center;
+                height: 56px;
+                font-size: 15px;
+                resize: none;
+            }
+
+            .sections {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                width: 351px;
+                height: 194px;
+                margin-right: 62px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .otherImg {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 180px;
+                width: 144px;
+                height: 32px;
+            }
+
+            .like {
+                display: block;
+                width: 20px;
+                height: 17px;
+            }
+
+            .card {
+                display: block;
+                width: 25px;
+                height: 22px;
+            }
+
+            .user {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+
+            .step3{
+                display: none;
+            }
+
+            .step1 {
+                display: block;
+            }
+
+            .summaryAndCardScreen {
+                width: 1120px;
+                height: 704px;
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+            .summaryScreen {
+                width: 512px;
+            }
+
+
+            .CardScreen {
+                width: 512px;
+                height: 704px;
+            }
+
+            .footer2{
+
+                display: block;
+            }
+
+            .footer {
+                display: none;
+            }
+
+            .products {
+                display: block;
+            }
+
+            .productImageDiv {
+                display: block;
+            }
+
+            .productImageDiv {
+                display: block;
+            }
+
+            .productInfos {
+                display: block;
+            }
+
+            .productTitle {
+                display: block;
+            }
+
+            .PriceAndQuantity {
+                display: block;
+            }
+
+            .PriceAndQuantity {
+                display: block;
+            }
+
+
+            .close {
+                display: block;
+            }
+
+            .totalPriceText {
+                display: block;
+            }
+
+
+
+        }
+
     </style>
 </head>
 
@@ -15,46 +499,99 @@
     <script>
 
         const body = document.querySelector("body");
-        body.style.width = "373px";
-        body.style.height = "auto";
-        body.style.border = "1px solid rgba(181, 181, 181, 1)";
-        body.style.display = "flex";
-        body.style.flexDirection = "column";
-        body.style.alignItems = "center";
+        body.className = "body";
 
         const menu = document.createElement("div");
         body.appendChild(menu);
-        menu.style.width = "375px";
-        menu.style.height = "88px";
-        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
-        menu.style.alignItems = "center";
-        menu.style.justifyContent = "space-between";
-        menu.style.display = "flex";
-        menu.style.flexDirection = "row";
-
+        menu.className = "menu";
 
         const cyber = document.createElement("img");
         menu.appendChild(cyber);
         cyber.src = "Logo Vector.png";
-        cyber.style.width = "65.4px";
-        cyber.style.height = "22.87px";
-        cyber.style.marginLeft = "16px";
+        cyber.className = "cyber";
+
+        const searchButton = document.createElement("textarea");
+        searchButton.className = "search-button";
+        menu.appendChild(searchButton);
+        searchButton.placeholder = "Search";
+
+        const sections = document.createElement("div");
+        menu.appendChild(sections);
+        sections.className = "sections";
+
+        const home = document.createElement("p");
+        sections.appendChild(home);
+        home.innerText = "Home";
+
+        const about = document.createElement("p");
+        sections.appendChild(about);
+        about.innerText = "About";
+
+        const contactUs = document.createElement("p");
+        sections.appendChild(contactUs);
+        contactUs.innerText = "Contact Us";
+
+        const blog = document.createElement("p");
+        sections.appendChild(blog);
+        blog.innerText = "Blog";
+
+        const otherImg = document.createElement("div");
+        menu.appendChild(otherImg);
+        otherImg.className = "otherImg";
+
+        const like = document.createElement("img");
+        otherImg.appendChild(like);
+        like.src = "like.png";
+        like.className = "like";
+
+        const card = document.createElement("img");
+        otherImg.appendChild(card);
+        card.src = "card.png";
+        card.className = "card";
+
+        card.onclick = () => {
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "shoppingCard.html";
+            window.location.href = url;
+        }
+
+        const step1 = document.createElement("img");
+        document.body.appendChild(step1);
+        step1.src = "stepsmasaustu3.png";
+        step1.className = "step1";
+
+        const user = document.createElement("img");
+        otherImg.appendChild(user);
+        user.src = "User.png";
+        user.className = "user";
 
         const burger = document.createElement("img");
         menu.appendChild(burger);
         burger.src = "Burger.png";
-        burger.style.width = "40px";
-        burger.style.height = "40px";
-        burger.style.marginRight = "24px";
+        burger.className = "burger";
 
         const step3 = document.createElement("img");
         body.appendChild(step3);
-        step3.style.width = "373px";
-        step3.style.height = "104px";
         step3.src = "Steps3.png";
+        step3.className = "step3";
+
+        const summaryAndCardScreen = document.createElement("div");
+        body.appendChild(summaryAndCardScreen);
+        summaryAndCardScreen.className = "summaryAndCardScreen";
+
+        const summaryScreen = document.createElement("div");
+        summaryAndCardScreen.appendChild(summaryScreen);
+        summaryScreen.className = "summaryScreen";
+
+
+        const CardScreen = document.createElement("div");
+        summaryAndCardScreen.appendChild(CardScreen);
+        CardScreen.className = "CardScreen";
 
         const h2Div = document.createElement("div");
-        body.appendChild(h2Div);
+        CardScreen.appendChild(h2Div);
         h2Div.style.width = "341px";
         h2Div.style.height = "24px";
         h2Div.style.display = "flex";
@@ -67,9 +604,9 @@
         h2.style.fontSize = "21px";
         h2.innerText = "Payment";
 
-
+   
         const creditCard = document.createElement("div");
-        body.appendChild(creditCard);
+        CardScreen.appendChild(creditCard);
         creditCard.style.width = "337px";
         creditCard.style.height = "188.28px";
         creditCard.style.display = "flex";
@@ -201,16 +738,15 @@
         name.style.border = "none";
 
 
-
         const icon = document.createElement("img");
         holder.appendChild(icon);
         icon.src = "Left.png";
         icon.style.width = "40.24px";
         icon.style.height = "24.99px";
 
-
         const holderName = document.createElement("textarea");
-        body.appendChild(holderName);
+        CardScreen.appendChild(holderName);
+        holderName.className = "holderName";
         holderName.style.width = "341px";
         holderName.style.height = "48px";
         holderName.style.display = "flex";
@@ -220,7 +756,6 @@
         holderName.style.fontSize = "16px";
         holderName.style.color = "rgba(151, 151, 151, 1)";
         holderName.style.backgroundColor = "white";
-        holderName.style.resize = "none";
         holderName.style.border = "1px solid rgba(206, 206, 206, 1)";
         holderName.style.marginTop = "40px";
         holderName.style.justifyContent = "center";
@@ -234,7 +769,7 @@
 
 
         const cardNumber = document.createElement("div");
-        body.appendChild(cardNumber);
+        CardScreen.appendChild(cardNumber);
         cardNumber.style.width = "341px";
         cardNumber.style.height = "48px";
         cardNumber.style.display = "flex";
@@ -254,7 +789,6 @@
         cardNumberText.style.fontFamily = "arial";
         cardNumberText.style.color = "rgba(151, 151, 151, 1)";
         cardNumberText.style.fontSize = "14px";
-
 
         const numbers1 = document.createElement("textarea");
         cardNumber.appendChild(numbers1);
@@ -345,7 +879,7 @@
 
 
         const expAndCvv = document.createElement("div");
-        body.appendChild(expAndCvv);
+        CardScreen.appendChild(expAndCvv);
         expAndCvv.style.width = "341px";
         expAndCvv.style.height = "48px";
         expAndCvv.style.backgroundColor = "rgba(246, 246, 246, 1)";
@@ -390,7 +924,7 @@
         cvv.maxLength = 3;
 
         const billing = document.createElement("div");
-        body.appendChild(billing);
+        CardScreen.appendChild(billing);
         billing.style.marginTop = "48px";
         billing.style.width = "316.67px";
         billing.style.height = "24px";
@@ -426,7 +960,7 @@
 
 
         const BackAndNext = document.createElement("div");
-        body.appendChild(BackAndNext);
+        CardScreen.appendChild(BackAndNext);
         BackAndNext.style.width = "341px";
         BackAndNext.style.height = "64px";
         BackAndNext.style.backgroundColor = "rgba(246, 246, 246, 1)";
@@ -485,10 +1019,94 @@
         body.appendChild(footer);
         footer.src = "footer.png";
         footer.style.marginTop = "48px";
+        footer.className = "footer";
+
+
+        let totalPrice = 0;
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+        cart.forEach(product => {
+
+            const products = document.createElement("div");
+            products.className = "products";
+            summaryScreen.appendChild(products);
+            products.style.display = "flex";
+            products.style.backgroundColor = "rgba(246, 246, 246, 1)";
+            products.style.marginBottom = "15px";
+            products.style.borderRadius = "13px";
+
+            const productImageDiv = document.createElement("div");
+            productImageDiv.className = "productImageDiv";
+            products.appendChild(productImageDiv);
+
+            const productImage = document.createElement("img");
+            productImage.src = product.image;
+            productImage.style.width = "90px";
+            productImage.style.height = "90px";
+            productImageDiv.appendChild(productImage);
+            productImage.className = "productImage";
+
+            const productInfos = document.createElement("div");
+            productInfos.className = "productInfos";
+            products.appendChild(productInfos);
+
+            const productTitle = document.createElement("p");
+            productTitle.innerText = product.title;
+            productInfos.appendChild(productTitle);
+            productTitle.className = "productTitle";
+
+
+            const PriceAndQuantity = document.createElement("div");
+            PriceAndQuantity.className = "PriceAndQuantity";
+            productInfos.appendChild(PriceAndQuantity);
+
+            const price = document.createElement("p");
+            price.innerText = product.price + "$";
+            PriceAndQuantity.appendChild(price);
+            price.className = "price";
+
+
+            totalPrice += product.price;
+
+            const close = document.createElement("img");
+            close.src = "close.png";
+            close.style.width = "24px";
+            close.style.height = "24px";
+            PriceAndQuantity.appendChild(close);
+            close.className = "close";
 
 
 
-        
+
+            close.onclick = () => {
+                products.remove();
+                let newCart = JSON.parse(localStorage.getItem("cart")) || [];
+                newCart = newCart.filter(item => item.title !== product.title);
+                localStorage.setItem("cart", JSON.stringify(newCart));
+            };
+
+
+
+
+        });
+
+        const totalPriceText = document.createElement("p");
+        totalPriceText.innerText = "Total: " + totalPrice + "$";
+        summaryScreen.appendChild(totalPriceText);
+        totalPriceText.className = "totalPriceText";
+        totalPriceText.style.fontSize = "20px";
+
+        const footer2 = document.createElement("img");
+        document.body.appendChild(footer2);
+        footer2.src = "footer2.png";
+        footer2.className = "footer2";
+
+
+
+
+
+
+
 
 
     </script>

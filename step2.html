@@ -6,6 +6,323 @@
     <title>Document</title>
 
     <style>
+        body {
+            width: 373px;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(181, 181, 181, 1);
+            font-family: calibri, sans-serif;
+        }
+
+        .menu {
+            width: 375px;
+            height: 88px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(181, 181, 181, 1);
+        }
+
+        .logo {
+            width: 65.4px;
+            height: 22.87px;
+            margin-left: 16px;
+        }
+
+        .burger {
+            width: 40px;
+            height: 40px;
+            margin-right: 24px;
+        }
+
+        .step-img {
+            width: 373px;
+            height: 104px;
+        }
+
+        .h2-div {
+            width: 341px;
+            height: 24px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .heading {
+            font-size: 21px;
+            font-family: arial, sans-serif;
+        }
+
+        .shipment {
+            width: 343px;
+            height: 136px;
+            display: flex;
+            align-items: center;
+            border-radius: 11px;
+            border: 1px solid rgba(209, 209, 216, 1);
+            margin-top: 32px;
+        }
+
+        .shipment-cost {
+            width: 147.5px;
+            height: 88px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 24px;
+        }
+
+        .selection {
+            width: 24px;
+            height: 24px;
+            border-radius: 14px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .checkmark {
+            width: 12px;
+            height: 12px;
+        }
+
+        .price-text {
+            font-size: 18px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .delivery-time {
+            width: 90px;
+            height: 24px;
+            margin-left: 65px;
+            margin-bottom: 37px;
+        }
+
+        .time-text {
+            font-size: 19px;
+            white-space: nowrap;
+            color: rgba(23, 24, 59, 1);
+        }
+
+        .navigation {
+            width: 341px;
+            height: 64px;
+            background-color: rgba(246, 246, 246, 1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 64px;
+        }
+
+        .btn {
+            width: 158.5px;
+            height: 64px;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 550;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: calibri;
+        }
+
+        .back {
+            background-color: white;
+            border: 1px solid black;
+        }
+
+        .next {
+            background-color: black;
+            color: white;
+            border: 1px solid black;
+        }
+
+        .steps {
+            display: block;
+        }
+
+        .footer {
+            margin-top: 48px;
+        }
+
+        .footer2 {
+            display: none;
+        }
+
+        .search-button {
+            display: none;
+        }
+
+        .sections {
+            display: none;
+        }
+
+        .otherImg {
+            display: none;
+        }
+
+        .like {
+            display: none;
+        }
+
+        .card {
+            display: none;
+        }
+
+        .user {
+            display: none;
+        }
+
+        .step1 {
+            display: none;
+        }
+
+      
+        @media (min-width:720px) {
+
+
+            body {
+                width: 1439px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                border: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .menu {
+                width: 1439px;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                border-bottom: 1px solid rgba(181, 181, 181, 1);
+            }
+
+            .logo {
+                margin-left: 160px;
+                width: 65.4px;
+                height: 22.87px;
+            }
+
+            .burger {
+                display: none;
+            }
+
+            .search-button {
+                display: block;
+                width: 372px;
+                height: 58px;
+                border: 1px solid rgba(181, 181, 181, 1);
+                margin-right: 62px;
+                margin-left: 62px;
+                display: flex;
+                align-items: center;
+                height: 56px;
+                font-size: 15px;
+                resize: none;
+            }
+
+            .sections {
+                display: block;
+                display: flex;
+                flex-direction: row;
+                width: 351px;
+                height: 194px;
+                margin-right: 62px;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            .otherImg {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-right: 180px;
+                width: 144px;
+                height: 32px;
+            }
+
+            .like {
+                display: block;
+                width: 20px;
+                height: 17px;
+            }
+
+            .card {
+                display: block;
+                width: 25px;
+                height: 22px;
+            }
+
+            .user {
+                display: block;
+                width: 32px;
+                height: 32px;
+            }
+
+            .steps {
+                display: none;
+            }
+
+            .step1 {
+                display: block;
+            }
+
+            .step-img {
+                display: none;
+            }
+
+            .h2-div {
+                width: 1120px;
+                height: 24px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+            .shipment {
+                width: 1120px;
+                height: 136px;
+                display: flex;
+                align-items: center;
+                border-radius: 11px;
+                border: 1px solid rgba(209, 209, 216, 1);
+                margin-top: 32px;
+                justify-content: space-between;
+            }
+
+            .navigation {
+                width: 341px;
+                height: 64px;
+                background-color: rgba(246, 246, 246, 1);
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 64px;
+                margin-left: 685px;
+            }
+
+            .footer2 {
+                display: block;
+                margin-top: 150px;
+            }
+
+            .footer {
+                display: none;
+
+            }
+
+           
+
+        
+
+       
+        }
+    
+
     </style>
 </head>
 
@@ -14,272 +331,194 @@
 
     <script>
 
-        const body = document.querySelector("body");
-        body.style.width = "373px";
-        body.style.height = "auto";
-        body.style.border = "1px solid rgba(181, 181, 181, 1)";
-        body.style.display = "flex";
-        body.style.flexDirection = "column";
-        body.style.alignItems = "center";
+        const body = document.body;
+        body.className = "body";
 
         const menu = document.createElement("div");
+        menu.className = "menu";
         body.appendChild(menu);
-        menu.style.width = "375px";
-        menu.style.height = "88px";
-        menu.style.borderBottom = "1px solid rgba(181, 181, 181, 1)";
-        menu.style.alignItems = "center";
-        menu.style.justifyContent = "space-between";
-        menu.style.display = "flex";
-        menu.style.flexDirection = "row";
+
+        const logo = document.createElement("img");
+        logo.src = "Logo Vector.png";
+        logo.className = "logo";
+        menu.appendChild(logo);
+
+        const searchButton = document.createElement("textarea");
+        searchButton.className = "search-button";
+        menu.appendChild(searchButton);
+        searchButton.placeholder = "Search";
 
 
-        const cyber = document.createElement("img");
-        menu.appendChild(cyber);
-        cyber.src = "Logo Vector.png";
-        cyber.style.width = "65.4px";
-        cyber.style.height = "22.87px";
-        cyber.style.marginLeft = "16px";
+        const sections = document.createElement("div");
+        menu.appendChild(sections);
+        sections.className = "sections";
+
+        const home = document.createElement("p");
+        sections.appendChild(home);
+        home.innerText = "Home";
+
+        const about = document.createElement("p");
+        sections.appendChild(about);
+        about.innerText = "About";
+
+        const contactUs = document.createElement("p");
+        sections.appendChild(contactUs);
+        contactUs.innerText = "Contact Us";
+
+        const blog = document.createElement("p");
+        sections.appendChild(blog);
+        blog.innerText = "Blog";
+
+        const otherImg = document.createElement("div");
+        menu.appendChild(otherImg);
+        otherImg.className = "otherImg";
+
+        const like = document.createElement("img");
+        otherImg.appendChild(like);
+        like.src = "like.png";
+        like.className = "like";
+
+        const card = document.createElement("img");
+        otherImg.appendChild(card);
+        card.src = "card.png";
+        card.className = "card";
+
+        card.onclick = () => {
+
+            const urlParams = new URLSearchParams(window.location.search);
+
+            let url = "shoppingCard.html";
+            window.location.href = url;
+        }
+
+        const step = document.createElement("img");
+        document.body.appendChild(step);
+        step.src = "stepsmasaustu2.png";
+        step.className = "step1";
+
 
         const burger = document.createElement("img");
-        menu.appendChild(burger);
         burger.src = "Burger.png";
-        burger.style.width = "40px";
-        burger.style.height = "40px";
-        burger.style.marginRight = "24px";
+        burger.className = "burger";
+        menu.appendChild(burger);
+
+        const user = document.createElement("img");
+        otherImg.appendChild(user);
+        user.src = "User.png";
+        user.className = "user";
 
         const step2 = document.createElement("img");
-        body.appendChild(step2);
-        step2.style.width = "373px";
-        step2.style.height = "104px";
         step2.src = "Steps 2.png";
+        step2.className = "step-img";
+        body.appendChild(step2);
 
         const h2Div = document.createElement("div");
+        h2Div.className = "h2-div";
         body.appendChild(h2Div);
-        h2Div.style.width = "341px";
-        h2Div.style.height = "24px";
-        h2Div.style.display = "flex";
-        h2Div.style.flexDirection = "row";
-
 
         const h2 = document.createElement("p");
-        h2Div.appendChild(h2);
-        h2.style.fontFamily = "arial";
-        h2.style.fontSize = "21px";
         h2.innerText = "Shipment Method";
+        h2.className = "heading";
+        h2Div.appendChild(h2);
 
-
+       
         const shipment1 = document.createElement("div");
+        shipment1.className = "shipment";
         body.appendChild(shipment1);
-        shipment1.style.width = "343px";
-        shipment1.style.height = "136px";
-        shipment1.style.display = "flex";
-        shipment1.style.alignItems = "center";
-        shipment1.style.borderRadius = "11px";
-        shipment1.style.border = "1px solid rgba(209, 209, 216, 1)";
-        shipment1.style.marginTop = "32px";
 
         const shipmentCost = document.createElement("div");
+        shipmentCost.className = "shipment-cost";
         shipment1.appendChild(shipmentCost);
-        shipmentCost.style.width = "147.5px";
-        shipmentCost.style.height = "88px";
-        shipmentCost.style.display = "flex";
-        shipmentCost.style.flexDirection = "column";
-        shipmentCost.style.marginLeft = "24px";
- 
 
         const section = document.createElement("div");
+        section.className = "selection";
         shipmentCost.appendChild(section);
-        section.style.width = "24px";
-        section.style.height = "24px";
-        section.style.borderRadius = "14px";
-        section.style.border = "2px solid black";
-        section.style.display = "flex";
-        section.style.alignItems = "center";
-        section.style.justifyContent = "center";
-        section.classList.add("selection");
-
-      
 
         section.onclick = () => {
-
-
             const selected = document.createElement("img");
-            section.appendChild(selected);
             selected.src = "Check2.png";
-            selected.style.width = "12px";
-            selected.style.height = "12px";
-
-        }
-
-
+            selected.className = "checkmark";
+            section.appendChild(selected);
+        };
 
         const freeText = document.createElement("p");
-        shipmentCost.appendChild(freeText);
         freeText.innerText = "Free";
-        freeText.style.fontFamily = "calibri";
-        freeText.style.fontSize = "18px";
-        freeText.style.fontWeight = "600";
-        freeText.style.marginTop = "8px";
-
+        freeText.className = "price-text";
+        shipmentCost.appendChild(freeText);
 
         const deliveryTime = document.createElement("div");
+        deliveryTime.className = "delivery-time";
         shipment1.appendChild(deliveryTime);
-        deliveryTime.style.width = "90px";
-        deliveryTime.style.height = "24px";
-        deliveryTime.style.marginLeft = "65px";
-        deliveryTime.style.marginBottom = "37px";
-
 
         const timeText = document.createElement("p");
-        deliveryTime.appendChild(timeText);
         timeText.innerText = "7-14 Days";
-        timeText.style.fontFamily = "calibri";
-        timeText.style.fontSize = "19px";
-        timeText.style.whiteSpace = "nowrap";
-        timeText.style.color = "rgba(23, 24, 59, 1)";
-        
+        timeText.className = "time-text";
+        deliveryTime.appendChild(timeText);
 
         const shipment2 = document.createElement("div");
+        shipment2.className = "shipment";
         body.appendChild(shipment2);
-        shipment2.style.width = "343px";
-        shipment2.style.height = "136px";
-        shipment2.style.display = "flex";
-        shipment2.style.justifyContent = "center";
-        shipment2.style.alignItems = "center";
-        shipment2.style.borderRadius = "11px";
-        shipment2.style.border = "1px solid rgba(209, 209, 216, 1)";
-        shipment2.style.marginTop = "32px";
 
         const shipmentCost2 = document.createElement("div");
+        shipmentCost2.className = "shipment-cost";
         shipment2.appendChild(shipmentCost2);
-        shipmentCost2.style.width = "147.5px";
-        shipmentCost2.style.height = "88px";
-        shipmentCost2.style.display = "flex";
-        shipmentCost2.style.flexDirection = "column";
-        shipmentCost2.style.marginLeft = "24px";
 
         const section2 = document.createElement("div");
+        section2.className = "selection";
         shipmentCost2.appendChild(section2);
-        section2.style.width = "24px";
-        section2.style.height = "24px";
-        section2.style.borderRadius = "14px";
-        section2.style.border = "2px solid black";
-        section2.style.display = "flex";
-        section2.style.alignItems = "center";
-        section2.style.justifyContent = "center";
-        section2.classList.add("selection");
-
-
 
         section2.onclick = () => {
-
             const selected2 = document.createElement("img");
-            section2.appendChild(selected2);
             selected2.src = "Check2.png";
-            selected2.style.width = "12px";
-            selected2.style.height = "12px";
-            selected.section.remove();
-
-
-
-        }
+            selected2.className = "checkmark";
+            section2.appendChild(selected2);
+        };
 
         const priceText = document.createElement("p");
-        shipmentCost2.appendChild(priceText);
         priceText.innerText = "10$";
-        priceText.style.fontFamily = "calibri";
-        priceText.style.fontSize = "18px";
-        priceText.style.fontWeight = "600";
-        priceText.style.marginTop = "8px";
+        priceText.className = "price-text";
+        shipmentCost2.appendChild(priceText);
 
         const deliveryTime2 = document.createElement("div");
+        deliveryTime2.className = "delivery-time";
         shipment2.appendChild(deliveryTime2);
-        deliveryTime2.style.width = "90px";
-        deliveryTime2.style.height = "24px";
-        deliveryTime2.style.marginLeft = "65px";
-        deliveryTime2.style.marginBottom = "37px";
 
         const timeText2 = document.createElement("p");
-        deliveryTime2.appendChild(timeText2);
         timeText2.innerText = "1-3 Days";
-        timeText2.style.fontFamily = "calibri";
-        timeText2.style.fontSize = "19px";
-        timeText2.style.whiteSpace = "nowrap";
-        timeText2.style.color = "rgba(23, 24, 59, 1)";
+        timeText2.className = "time-text";
+        deliveryTime2.appendChild(timeText2);
 
+        const nav = document.createElement("div");
+        nav.className = "navigation";
+        body.appendChild(nav);
 
-        const BackAndNext = document.createElement("div");
-        body.appendChild(BackAndNext);
-        BackAndNext.style.width = "341px";
-        BackAndNext.style.height = "64px";
-        BackAndNext.style.backgroundColor = "rgba(246, 246, 246, 1)";
-        BackAndNext.style.alignItems = "center";
-        BackAndNext.style.justifyContent = "space-between";
-        BackAndNext.style.display = "flex";
-        BackAndNext.style.flexDirection = "row";
-        BackAndNext.style.marginTop = "64px";
+        const backBtn = document.createElement("div");
+        backBtn.className = "btn back";
+        backBtn.innerText = "Back";
+        nav.appendChild(backBtn);
 
+        backBtn.onclick = () => {
+            window.location.href = "step1.html";
+        };
 
-        const BackButton = document.createElement("div");
-        BackAndNext.appendChild(BackButton);
-        BackButton.style.width = "158.5px";
-        BackButton.style.height = "64px";
-        BackButton.style.borderRadius = "6px";
-        BackButton.innerText = "Back";
-        BackButton.style.border = "1px solid black";
-        BackButton.style.backgroundColor = "white";
-        BackButton.style.alignItems = "center";
-        BackButton.style.justifyContent = "center";
-        BackButton.style.display = "flex";
-        BackButton.style.flexDirection = "row";
-        BackButton.style.fontFamily = "calibri";
-        BackButton.style.fontSize = "18px";
-        BackButton.style.fontWeight = "550";
+        const nextBtn = document.createElement("div");
+        nextBtn.className = "btn next";
+        nextBtn.innerText = "Next";
+        nav.appendChild(nextBtn);
 
-        BackButton.onclick = () => {
-
-
-            const urlParams = new URLSearchParams(window.location.search);
-
-            let url = "step1.html";
-            window.location.href = url;
-
-        }
-
-
-        const NextButton = document.createElement("div");
-        BackAndNext.appendChild(NextButton);
-        NextButton.style.width = "158.5px";
-        NextButton.style.height = "64px";
-        NextButton.style.borderRadius = "6px";
-        NextButton.innerText = "Next";
-        NextButton.style.border = "1px solid black";
-        NextButton.style.backgroundColor = "black";
-        NextButton.style.color = "white";
-        NextButton.style.alignItems = "center";
-        NextButton.style.justifyContent = "center";
-        NextButton.style.display = "flex";
-        NextButton.style.flexDirection = "row";
-        NextButton.style.fontFamily = "calibri";
-        NextButton.style.fontSize = "18px";
-        NextButton.style.fontWeight = "550";
-
-
-        NextButton.onclick = () => {
-
-
-            const urlParams = new URLSearchParams(window.location.search);
-
-            let url = "step3.html";
-            window.location.href = url;
-
-        }
+        nextBtn.onclick = () => {
+            window.location.href = "step3.html";
+        };
 
         const footer = document.createElement("img");
-        body.appendChild(footer);
         footer.src = "footer.png";
-        footer.style.marginTop = "48px";
+        footer.className = "footer";
+        body.appendChild(footer);
 
+        const footer2 = document.createElement("img");
+        document.body.appendChild(footer2);
+        footer2.src = "footer2.png";
+        footer2.className = "footer2";
 
 
 
